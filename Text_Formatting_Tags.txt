@@ -105,16 +105,18 @@
       </div>
 
   Scrolling Text: <marquee> tag is used to scroll the text or image or object of a webpage </marquee>
-
   Attributes of <marquee> Tag:
-    Align: Sets the alignment of the text relative to marquee. Values are: TOP/BOTTOM/MIDDLE 
-    Behavior: Sets how the text in the marquee should move. Values are: SCROLL/SLIDE/ALTERNATE 
-    Bgcolor: sets the background color for the marquee box. Values are: Color names/Color codes
-    Direction: Sets the direction the text should scroll. Values are: LEFT/RIGHT/UP/DOWN 
-    Width: Sets the width of marquee box. Values are : in percentage
-    Height: Sets the height of marquee box. Values are: in percentage
-    Scrollamount: Sets the speed of marquee text. Values are: in pixels
-    Scrolldelay: Sets the delay of marquee text. Values are in pixels
+   | Attributes   |       Usage                                                                        |
+   |--------------|------------------------------------------------------------------------------------|
+   | Align        | Sets the alignment of the text relative to marquee. Values are: TOP/BOTTOM/MIDDLE  |
+   | Behavior     | Sets how the text in the marquee should move. Values are: SCROLL/SLIDE/ALTERNATE   | 
+   | Bgcolor      | sets the background color for the marquee box. Values are: Color names/Color codes |
+   | Direction    | Sets the direction the text should scroll. Values are: LEFT/RIGHT/UP/DOWN          |
+   | Width        | Sets the width of marquee box. Values are : in percentage                          |
+   | Height       | Sets the height of marquee box. Values are: in percentage                          |
+   | Scrollamount | Sets the speed of marquee text. Values are: in pixels                              |
+   | Scrolldelay  | Sets the delay of marquee text. Values are in pixels                               |
+    
     Example:
       <div class="scroll-text">Texas Tech University</div>
        <style>
@@ -147,6 +149,8 @@
   Formatting inline text: <span> tag is used to apply the different styles to particular text in a block of text
     Example:
       Texas <span styles = "color:red;font-size:200">Tech</span>University
+
+==================================================================================================================================================================================================================================
 
 HTML Program on various Text formattiong tags
 <html>
@@ -203,4 +207,5 @@ HTML Program on various Text formattiong tags
         </center>
     </body>
 </html>
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+======================================================================================================================================================================================================================================
