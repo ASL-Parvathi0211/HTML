@@ -1,0 +1,206 @@
+# Various Text Formatting Tags in HTML 
+  Heading Styles: HTML supports six different levels of headings. The highest-level header format is <h1> and the lowest level is <h6>. All the styles appear in BOLD face and the size of the heading depends on the level chosen <h1> to <h6>
+    Example:
+      <h1> Texas Tech University </h1>
+      <h2> Texas Tech University </h2>
+      <h3> Texas Tech University </h3>
+      <h4> Texas Tech University </h4>
+      <h5> Texas Tech University </h5>
+      <h6> Texas Tech University </h6>
+
+  Bold Text: <b> tag is used to set the text as bold </b>
+    Example:
+      <b> Texas Tech University </b>
+    *The <b> tag still works, but <strong> is now the preferred choice for marking bold text with semantic meaning. <strong> indicates that the text is of strong importance, and it is usually rendered bold by default.
+        <strong> Texas Tech university </strong>
+
+  Italic Text: <i> tag is used to set the text as italic </i>
+    Example:
+      <i> Texas Tech University </i>
+
+  Underlining Text: <u> tag is used to set the text as underlining </u>
+    Example: 
+      <u> Texas Tech University </u>
+
+  Striking Text: <s> and <strike> tags are used to set the text as striking
+    Example: 
+      <strike> Texas Tech University </strike>
+
+  Bigger text: <big> tag is used to set the text as bigger </big>
+    Example:
+      <big> Texas Tech University </big>
+
+  Smaller text: <small> tag is used to set the text as smaller </small>
+    Example: 
+      <small> Texas Tech University </small>
+    *The <big> and <small> tags still work, but they are deprecated. It's better to use CSS to adjust the text size
+
+  Subscript Text: <sub> tag is used to set the text as subscript </sub>
+    Example: 
+      H<sub>2</sub>0
+ 
+  Superscript Text: <sup> tag is used to set the text as superscript </sup>
+    Example:
+      (A+B)<sup>2</sup>=A<sup>2</sup>+B<sup>2</sup>+2AB
+    * Both <sub> and <sup> remain in use and are appropriate for their intended purposes, like writing chemical formulas or mathematical equations.
+
+  Strong Text: <strong> tag is used to set the text as strong bold </strong>
+    Example: 
+      <strong> Texas Tech University </strong>
+    
+  Font Tag: <font> tag is used to display the text in various sizes, various colors and various styles
+    Example: 
+      <FONT FACE = "Arial" SIZE = "4" COLOR = "RED"> Nagarjuna </FONT>
+      <FONT FACE = "Calibri" SIZE = "5" COLOR = "Green"> Nagarjuna </FONT>
+      <FONT FACE = "Chiller" SIZE = "6" COLOR = "Blue"> Nagarjuna </FONT>
+    * The <font> tag is deprecated in HTML5. The recommended approach is to use CSS for styling fonts, including size, color, and typeface.
+
+  Blinking Text: <Blink> tag is used to set the text as blinking </Blink>
+    Example: 
+      <Blink> Texas Tech University </Blink>
+    * The <blink> tag is obsolete and should be avoided. Blinking text is now considered distracting and is not supported in modern browsers. You should use CSS animations or JavaScript if you want to achieve similar effects
+
+  Deleted Text: <DEL> tag is used to set the text as deleted text </DEL>
+    Example:
+      <DEL> Deleted Text </DEL>
+
+  Alignement Tags: These tags are used for presenting and arranging text
+
+  Paragraph Text: <p> tag is used to arrange the text intro paragraphs. It contain one attribute that is align = "center/left/right"
+    Example: 
+      <p align = "left/center/right">
+           ---text
+      </p>
+
+  Line breaks: <br> tag is used to move the text to next line
+    Example: 
+      SRINIVASARAO <br> Lubbock <br> Texas
+
+  Centering Text: <center> tag is used to align the text/image at center of webpage
+    Example:
+      <center> Texas Tech University </center>
+    
+  Performatted Text: <pre> tag is used to set the text with pre formatted structure it means it automatically arranges the text in proper alignment </pre>
+    Example:
+      <pre>
+              *
+             * *
+            * * *
+           * * * *
+          * * * * * 
+      </pre>
+
+  Horizontal Rules: <hr> tag is used to draw the line in various sizes. It contains five attributes size, width, color and align and noshade
+    Example: 
+      <HR align = "Center" size = "5" width = "75%" color = "green" noshade>
+
+  Block of Text Formatting: <div> tag is used to divide the page content into no.of blocks. We can apply different formats to different blocks. </div>
+    Syntax:
+      <div name = "div_name" align = "top/bottom/center" style = "style-attributes" > 
+        -- text 
+      </div>
+    Example:
+      <div style = "left:50px; top:250px; position:absolute; color:red; text:white; font-size:36pt; border:thin-groove;">
+        <p> This is the higher layer </p>
+      </div>
+
+  Scrolling Text: <marquee> tag is used to scroll the text or image or object of a webpage </marquee>
+
+  Attributes of <marquee> Tag:
+    Align: Sets the alignment of the text relative to marquee. Values are: TOP/BOTTOM/MIDDLE 
+    Behavior: Sets how the text in the marquee should move. Values are: SCROLL/SLIDE/ALTERNATE 
+    Bgcolor: sets the background color for the marquee box. Values are: Color names/Color codes
+    Direction: Sets the direction the text should scroll. Values are: LEFT/RIGHT/UP/DOWN 
+    Width: Sets the width of marquee box. Values are : in percentage
+    Height: Sets the height of marquee box. Values are: in percentage
+    Scrollamount: Sets the speed of marquee text. Values are: in pixels
+    Scrolldelay: Sets the delay of marquee text. Values are in pixels
+    Example:
+      <div class="scroll-text">Texas Tech University</div>
+       <style>
+       .scroll-text {
+        width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+        animation: scroll 5s linear infinite;
+       }
+       @keyframes scroll {
+        from { text-indent: 100%; }
+        to { text-indent: -100%; }
+      }
+      </style>
+
+  LOOP: Sets how many times you want the marquee to cycle
+    Example: 
+      <marquee align = "middle" direction = "right" behaviour = "alternate" scrollamount = 100 bgcolor = "blue" loop = 4 width = "75%" height = "15%">
+        Texas Tech University
+      </marquee>
+
+  Creating Columns: <multicol> tag is used to break the text into number of columns. This tag supports in Netscape Navigator browser
+    Example:
+      <multicol cols = 3 width = "90%" gutter = 10>
+        The browser displays the hyper link text in a blue color and also displays the text with underlined. When the mouse cursor is placed over it, the mouse cursor changes to the shape of hand.
+      </multicol>
+    * This was a Netscape-only tag and never became part of standard HTML. It's obsolete.
+
+  Formatting inline text: <span> tag is used to apply the different styles to particular text in a block of text
+    Example:
+      Texas <span styles = "color:red;font-size:200">Tech</span>University
+
+HTML Program on various Text formattiong tags
+<html>
+    <head>
+        <title> Text Formatting Tags </title>
+    </head>
+    <body>
+        <center>
+            <h1> Heading styles </h1>
+            <hr> 
+            <h1> Web Technology </h1>
+            <h2> web Technology </h2>
+            <h3> Web Technology </h3>
+            <h4> Web Technology </h4>
+            <h5> Web Technology </h5>
+            <h6> Web Technology </h6>
+            <hr>
+            <h1> BOLD, ITALIC, UNDERLINE & STRIKING TEXT </h1>
+            <hr>
+            <B> Text displays as BOLD </B> 
+            <I> Text dispalys as ITALIC </I>
+            <U> Text displays with Underline </U>
+            <STRIKE> Text displays with strike through </STRIKE>
+            <hr>
+            <h1> BIG, SMALL 7 STRONG TEXT </h1>
+            <hr>
+            <BIG> Text displays as Big Size </BIG><br>
+            <SMALL> Text displays as small size </SMALL> <br>
+            <STRONG> Text displays as strong </STRONG> <br>
+            <hr>
+            <h1> FONT STYLE, SIZE & COLOR OF A TEXT </h1>
+            <hr>
+            <FONT FACE = "IMPACT" SIZE = 7 COLOR = "RED">
+                TEXAS TECH UNIVERSITY
+            </FONT> <br>
+            <hr>
+            <h1> SUB SCRIPT & SUB SCRIPT OF A TEXT </h1>
+            <hr>
+            (A+B) <SUP>2</SUP>=A<SUP>2</SUP>+B<SUP>2</SUP>+2AB
+            <br>
+            H<SUB>2</SUB>SO<SUB>2</SUB>
+            <hr>
+            <h1> BLINKING & DELETED TEXT </h1>
+            <hr>
+            <BLINK> Text displays as Blinking </BLINK>
+            <br>
+            <DEL> Deleted Text </DEL>
+            <hr>
+            <h1> Scrolling Text </h1>
+            <hr>
+            <marquee>
+                TEXAS TECH UNIVERITY
+            </marquee>
+        </center>
+    </body>
+</html>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
