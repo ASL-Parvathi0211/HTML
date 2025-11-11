@@ -1,0 +1,141 @@
+What is Hyperlinks 
+HTML allows linking to other HTML documents as well as images. Clicking on a text or an image in one web page, It will open another web page or an image. The text or an image that provides such linkages are called Hypertext or a hyperlink or a hotspot
+
+Hyperlink Features:
+  The browser displays the hyper link text in a blue color and also displays the text with underlined. When the mouse cursor is placed over it, the mouse cursor changes to the shape of hand 
+  Blue color is the default for hyper linked text. To change these link colors, there are 2 attributes that can be specified with the <body> tag
+  They are: 
+    1. vlink: Sets color of visited links. Changes the default color of hyperlink. The user can change the color by specifying the name of the colors
+      EX: <body vlink = "green">  
+    
+    2. alink: Sets color of active links (when clicked). Changes the default color of hyperlink that already visited. The user can change the color by specifying the name of the color.
+      EX: <body alink = "green">
+
+    3. link: Sets color of unvisited links. The link attribute in the <body> tag sets the default color of unvisited hyperlinks on a webpage.
+      EX: <body link="blue" vlink="purple" alink="red"> displays all unvisited links in blue 
+
+Creation of Hyperlink:
+  Links are created in a web page by using [anchor tags] <a> </a> tags. Anything written between the <a>  </a> tags become a hyperlink/hotspot. By clicking on the hyperlink it opens a different web page or image.
+  Using HREF attrbute of the <a> tag the next navigable web page or image can be specified. The path of the linked file or image can be specified into the HREF attribute
+    Example: <a href = "target file">text/image</a>
+             <a href="https://www.ttu.edu" target="_blank">Visit TTU</a>
+
+Types of Hyperlinks
+  Links are created using the anchor tag <a>. Anything between <a> and </a> becomes clickable.
+  There are mainly two types of hyper links, they are 
+  1. Text Hyperlinks: A hyperlink is created with a text, those hyperlinks are called astext Hyperlinks.
+    Synatx:  <a href = "target file"> any text </a>
+    EXample: <a href = "http://www.gmail.com"> Click here </a>
+
+  2. Image Hyperlinks: Image hyperlinks in HTML let you turn an image into a clickable link using the <a> tag wrapped around an <img> tag
+    Syntax:  <a href = "target file"><img src = "image address"></a>
+    Example: <a href = "http://www.gmail.com"><img src = "pic1.jpg"></a>
+
+    Note: The <img> tag is self closing. So, ther is no need to mention </img> tag.
+
+Other Classification of Hyperlinks:
+  The other classification of Hyperlinks are 
+  1. External Hyperlinks: when we click on a hyperlink, if it opens another document then that hyperlink is called as External Hyperlinks
+   Linking to an External document: HREF attribute is used to linking other external documents. To link other documents by clicking the hyperlink we should target path to href attribute of <a> tag 
+    Example: <a href = "details.html">visit my home page </a>
+      In the above example "visit my home page" becomes a hyperlink, and links to the document "details.html", which is present in the current directory. If the file is not present in the current directory, a relative or absolute path can be specified
+
+   Jumping to a particular location of External webpage
+    Step 1. Identify the lcoation in a web page and mark that location by giving the location name 
+      Syntax: <a name = "location_name"> text </a>
+      Example: <a name = "Degree College"></a>
+    Step 2. While Jumping to a specific web page and a specific location on the web page, in addition to the name of the web page to be jumped to, the name of the location on the web page to go to is also required
+      Syntax: <a href = "file_name.html#location_name">Text</a>
+      Example: <a href = "details.html#cdc"> visit my Home Page </a>
+  
+  2. Internal Hyperlinks: When we click on a hyperlink, if it opens other location of same document then that hyperlink is called as Internal Hyperlinks
+   Linking to an Internal Document: Sometimes, a jump is required to a different location in the same document. So the jump has to be targeted toa  specific location, the same two steps need to be performed as before i.e. identify a lcoation with a name and then jump to that location using the name.
+    Syntax: <a href = "#location_name">Text</a>
+    Example: <a href = "#cdc"> Visit my Home page </a>
+
+==============================================================================================================================================================================================================================================================================================================================================================
+
+HTML Program to External Hyperlinks
+ Mainpage.html 
+  <html>
+    <head>
+     <title>Example of External Hyperlinks</title>
+    </head>
+    <body link="blue" alink="red" vlink="purple">
+     <a href="page1.html">Let's see Page 1</a><br>
+     <a href="page2.html">Let's see Page 2</a><br>
+     <a href="page3.html">Let's see Page 3</a><br>
+    </body>
+  </html>
+  
+ Page1.html 
+  <html>
+    <head>
+     <title>Page 1</title>
+    </head>
+    <body bgcolor="red" text="white">
+     <center><h1>Page 1</h1></center>
+    </body>
+  </html>
+
+ Page2.html 
+  <html>
+    <head>
+     <title>Page 2</title>
+    </head>
+    <body bgcolor="green" text="white">
+     <center><h1>Page 2</h1></center>
+    </body>
+ </html>
+
+ Page3.html 
+  <html>
+    <head>
+     <title>Page 3</title>
+    </head>
+    <body bgcolor="blue" text="white">
+     <center><h1>Page 3</h1></center>
+    </body>
+ </html>
+
+=============================================================================================================================================================================================================================================================================================================
+
+HTML Program to Internal Hyperlinks
+ <html>
+  <head>
+    <title>Internal Hyperlinks</title>
+  </head>
+  <body>
+    <center>
+      <h1>Creating Internal Hyperlinks</h1>
+      Today we visited Texas Tech University.
+      <a href="#cdc"><sup>Click here</sup></a>
+
+      <!-- Long spacing to simulate scroll -->
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br>
+
+      <a name="cdc">Texas Tech University, Lubbock</a>
+    </center>
+  </body>
+</html>
+
+===============================================================================================================================================================================================================================================================================================================
+
+HTML Program to Image Hyperlinks
+ <html>
+  <head>
+    <title>Image Hyperlink Example</title>
+  </head>
+  <body>
+    <center>
+      <h1>Creating a Graphical Hyperlink</h1>
+      <a href="https://www.ttu.edu">
+        <img width="200" height="125" src="cdc.jpg" alt="Click to go to TTU!">
+      </a>
+    </center>
+  </body>
+ </html>
+ 
+=================================================================================================================================================================================================================================================================================================================================================================================
