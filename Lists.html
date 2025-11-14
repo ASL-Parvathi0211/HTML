@@ -1,0 +1,194 @@
+# Lists 
+ Lists are used to arrange in teh sequence manner. Lists are used in the web page for arrange the web elements in proper manner
+
+Types of Lists
+  There are 3 types of lists
+ 1. Ordered lists
+   An ordered list is used when the order of items matters — like steps, ranks, or numbered data.
+   It starts with the <ol> tag and ends with </ol>.
+   Each item inside the list is defined with the <li> (list item) tag.
+
+  Attributes of <ol> tag
+   a. type – Defines the numbering style.
+    Possible values:
+      type="1" → Numbers (1, 2, 3, …)
+      type="A" → Uppercase letters (A, B, C, …)
+      type="a" → Lowercase letters (a, b, c, …)
+      type="I" → Uppercase Roman numerals (I, II, III, …)
+      type="i" → Lowercase Roman numerals (i, ii, iii, …)
+
+   b. start – Specifies the starting number of the list.
+    Example: start="5" will begin numbering from 5.
+    
+   c. value – Used inside a <li> tag to change numbering at any point in the list.
+
+  Example:
+  <h2>Ordered List Example</h2>
+    <ol type="A" start="3">
+      <li>Mango</li>
+      <li>Banana</li>
+      <li value="10">Apple</li>
+      <li>Orange</li>
+      <li>Pineapple</li>
+    </ol>
+                    
+ 2. Unordered list
+   An unorderd list starts with <UL> tag and ends with </UL> tag. Each list item should be placed between <LI> and </LI> tags. The attrinutes that can be specified with <UL> are
+
+    Attributes of <UL> tag:
+      Type: This attribute specifies symbolic scheme to be used for list items
+            Type = "FILL ROUND" will give a solid round black bullet
+            Type = "SQUARE" will give a solid SQUARE black bullet
+            Type = "circle" will give a circle to the every list item
+        
+    Example: <h1><u> Shopping list </u></h1>
+    <h2>Unordered List Example</h2>
+      <ul type="square">
+        <li>Bread</li>
+        <li>Milk</li>
+        <li>Eggs</li>
+        <li>Butter</li>
+      </ul>
+
+
+ 3. Definition list
+ A definition list is used to describe terms and their meanings — similar to a dictionary or glossary.  
+ <DL> and </DL> are used to create the definition list
+
+   Definition list consists of two parts:
+    a. Definition term: Appears the tag <DT>. Used to provide definition heading
+    b. Definition Description: Appears after the tag <DD>. Used to provide the definition meaning
+      Example:
+      <h2>Definition List Example</h2>
+      <dl>
+        <dt>Keyboard</dt>
+        <dd>An input device used to type data into a computer.</dd>
+
+        <dt>Monitor</dt>
+        <dd>An output device used to display information.</dd>
+        
+        <dt>CPU</dt>
+        <dd>Central Processing Unit — the brain of the computer.</dd>
+      </dl>
+
+ 4. Nested Lists 
+    You can create a list inside another list — this is called a nested list.
+    It's useful when items have subcategories or multiple levels.
+
+    Example: 
+    <h2>Nested List Example</h2>
+    <ol>
+      <li>Fruits
+        <ul type="circle">
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Orange</li>
+        </ul>
+      </li>
+      <li>Vegetables
+        <ul type="square">
+          <li>Carrot</li>
+          <li>Potato</li>
+          <li>Onion</li>
+        </ul>
+      </li>
+    </ol>
+
+=========================================================================================================================================================================================
+
+HTML Program on three types of lists
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>HTML Lists Example</title>
+    </head>
+    <body>
+      <h1><u>Unordered Lists</u></h1>
+      <ul type="disc">
+        <li>Floppy</li>
+        <li>Hard Disk</li>
+        <li>CD</li>
+        <li>DVD</li>
+        <li>USB</li>
+      </ul>
+      
+      <ul type="square">
+        <li>Floppy</li>
+        <li>Hard Disk</li>
+        <li>CD</li>
+        <li>DVD</li>
+        <li>USB</li>
+      </ul>
+      
+      <ul type="circle">
+        <li>Floppy</li>
+        <li>Hard Disk</li>
+        <li>CD</li>
+        <li>DVD</li>
+        <li>USB</li>
+      </ul>
+      
+      <hr color="red" size="3">
+      <h1><u>Ordered Lists</u></h1>
+      <ol type="1">
+        <li>Floppy</li>
+        <li>Hard Disk</li>
+        <li>CD</li>
+        <li>DVD</li>
+        <li>USB</li>
+      </ol>
+      
+      <ol type="A">
+        <li>Floppy</li>
+        <li>Hard Disk</li>
+        <li>CD</li>
+        <li>DVD</li>
+        <li>USB</li>
+      </ol>
+      <ol type="i">
+        <li>Floppy</li>
+        <li>Hard Disk</li>
+        <li>CD</li>
+        <li>DVD</li>
+        <li>USB</li>
+      </ol>
+      
+      <ol type="I">
+        <li>Floppy</li>
+        <li>Hard Disk</li>
+        <li>CD</li>
+        <li>DVD</li>
+        <li>USB</li>
+      </ol>
+      
+      <hr color="blue" size="3">
+      
+      <h1><u>Definition List</u></h1>
+      
+      <dl>
+        <dt>Keyboard</dt>
+        <dd>Input device used for typing</dd>
+        
+        <dt>Monitor</dt>
+        <dd>Output device used for display</dd>
+        
+        <dt>CPU</dt>
+        <dd>Central Processing Unit — controls all operations</dd>
+      </dl>
+    </body>
+  </html>
+
+=========================================================================================================================================================================================
+
+Key Points to Remember
+<ol> → Ordered (numbered) list
+<ul> → Unordered (bulleted) list
+<dl> → Definition (term and description) list
+<li> → List item (used inside <ol> and <ul>)
+<dt> → Term, <dd> → Description (used inside <dl>)
+Always close your tags properly (</li>, </ol>, etc.)
+Avoid outdated attributes like type in <ul> — prefer CSS
+Lists can be nested to create sub-categories
+
+==============================================================================================================================================================================
