@@ -1,0 +1,199 @@
+# How can you set the images to your web pages
+  Images play an important role in web design. They make pages visually appealing and help convey information more effectively. In HTML, images can be added inside the page content, or used as backgrounds through CSS.
+
+============================================================================================================================================================================================================================
+
+  Image formats: There are several types of image format. They are 
+    Different image formats are supported in HTML. Each serves a different purpose:
+     | Format        | Full Form                        | Description                                                                           |
+     |---------------|----------------------------------|---------------------------------------------------------------------------------------|
+     | JPEG (or JPG) | Joint Photographic Experts Group | Common for photos; supports millions of colors but no transparency.                   |
+     | PNG           | Portable Network Graphics        | Supports transparency; ideal for logos, icons, and sharp-edged graphics.              |
+     | GIF           | Graphics Interchange Format      | Supports animation and limited colors; used for simple animations.                    |
+     | BMP           | Bitmap                           | Large file size; rarely used on modern web pages.                                     |
+     | SVG           | Scalable Vector Graphics         | XML-based format; best for logos and illustrations; scales without quality loss.      |
+     | WebP / AVIF   | —                                | Modern formats that give better quality with smaller size; preferred for performance. |
+   --> To set the image on the webpage we use <IMG> tag
+    Syntax: <img src = "" align "" height = "" width "" bordercolors = "" alt "" hspace = "" vspace "">
+
+============================================================================================================================================================================================================================
+
+  IMG Tag Attributes
+    The <img> tag is used to embed an image into an HTML document. It is an empty tag (does not need a closing tag).
+     | Attribute  | Value               |          Description                                        |
+     |   SRC      | Address of an image | Specifies the image and its path                            |
+     |   width    | Number              | To increase or decrease the size of an image horizontally   |
+     |  Align     | Left/Right          | To place the image at left/right position of the webpage    |
+     |  Height    | Number              | To increase or decrease the size of an image vertically     |
+     |  Border    | Number              | To apply image border                                       |
+     | Bordercolor| Color name          | To apply border color                                       |
+     |    Alt     | Text                | To give alternate text (or) caption for an image            |
+     |  Hspace    | Number              | To give a horizontal space before an image                  |
+     |   Vspace   | Number              | To give a vertical space before an image                    |
+    Syntax: <img src="image.jpg" alt="Description of image">
+   Note: Always include alt text. It helps users with screen readers and also shows up when images fail to load.
+
+===================================================================================================================================================================================================================================
+
+  Image as background of a webpage
+    To set the image for background of a webpage, we use 'background' attribute in the <body> tag
+    Instead of the old <body background="image.jpg">, use CSS:
+    Syntax: <body background = "source_image"></body>
+    Example: <html>
+              <body background = "paris.jpg">
+                <CENTER><h1> Working with background images </h1></CENTER>
+              </body>
+             </html>
+
+    Syntax: <style>
+              body {
+               background-image: url('images/background.jpg');
+               background-size: cover;          /* scale image to fill the screen */
+               background-position: center;     /* center image */
+               background-repeat: no-repeat;    /* avoid tiling */
+              }
+            </style>
+    Example: <!DOCTYPE html>
+            <html>
+              <head>
+                <style>
+                body {
+                  background-image: url('images/paris.jpg');
+                  background-size: cover;
+                  background-position: center;
+                }
+                </style>
+              </head>
+              <body>
+                <h1>Working with Background Images</h1>
+              </body>
+            </html>
+
+  To place the image on a webpage in particular position:
+    To place the image on a webpage, we use 'src' attribute of <IMG> tag
+    Example: <body>
+              <img src = "d:\images\Indian Flag.jpg">
+             </body>
+
+  To set image as background and place the image on a webpage at a time:
+   Example: <body background = "E:\photos\Indian Flag.jpg">
+              <img src = "d:\images\gandhi.jpg">
+            </body>
+
+  To apply all attributes for image:
+   Example: <html>
+              <BODY BACKGROUND = "Sunlight.jpg">
+                <CENTER><h1> Working with background images </h1></CENTER>
+                <img src = "rose.bmp" width = 200 align = "left" height = "180" border = "5"
+                bordercolor = "orange" alt = "beautiful rose" vspace = "300" hspace = "500"/>
+              </BODY>
+            </html> 
+
+=====================================================================================================================================================================================================================================
+
+  Inserting an image on Web Page 
+    src specifies the path of the image.
+    alt provides alternative text.
+    width and height define the display size.
+    loading="lazy" loads image only when it appears on the screen.
+   Example: <!DOCTYPE html>
+            <html>
+              <head>
+                <title>Insert Image Example</title>
+              </head>
+              <body>
+                <h2>My Favorite Flower</h2>
+                <img src="images/rose.jpg" alt="Beautiful Red Rose" width="300" height="200" loading="lazy">
+              </body>
+            </html>
+
+====================================================================================================================================================================================================================================
+
+  Positioning and Styling Images with CSS 
+   CSS gives full control over how images appear
+    a. Aligning Images 
+      img {
+        float: right;  /* or left */
+        margin: 10px;
+      }
+
+    b. Adding Borders and Shadows 
+      img {
+        border: 5px solid orange;
+        border-radius: 8px;
+        box-shadow: 2px 2px 10px gray;
+      }
+
+    c. Making Images Responsive
+      img {
+        max-width: 100%;  /* fits inside container */
+        height: auto;     /* keeps correct ratio */
+      }
+
+======================================================================================================================================================================================================================================
+
+  Using <picture> and srcset for Responsive Images 
+    Modern websites use responsive images to display different image sizes or formats depending on screen size and browser capability
+    Browser picks the best format (AVIF, WebP, or JPG).
+    Reduces page load time and bandwidth usage.
+    Example:  <picture>
+                <source srcset="images/flower.avif" type="image/avif">
+                <source srcset="images/flower.webp" type="image/webp">
+                <img src="images/flower.jpg" alt="Colorful flower in sunlight" width="600" height="400" loading="lazy">
+              </picture>
+
+=======================================================================================================================================================================================================================================
+
+  Accessibility Tips
+    Every <img> must include an alt attribute
+    If the image is decorative only, set alt=""
+    For charts or complex images, provide a text description below using <figcaption>
+     Example: <figure>
+                <img src="images/chart.png" alt="Bar chart showing sales growth from 2020 to 2025">
+                <figcaption>Sales Growth Chart (2020–2025)</figcaption>
+              </figure>
+
+========================================================================================================================================================================================================================================
+
+  Complete Program about inserting images to webpage (Modern Standard Code)
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Images in Web Page</title>
+        <style>
+          body {
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+          }
+            img {
+              border: 5px solid orange;
+              border-radius: 10px;
+              margin: 20px;
+              max-width: 100%;
+              height: auto;
+            }
+        </style>
+      </head>
+      <body>
+        <h1>Inserting Images into Web Page</h1>
+
+        <p>Example of inserting and styling an image:</p>
+
+        <picture>
+          <source srcset="images/rose.avif" type="image/avif">
+          <source srcset="images/rose.webp" type="image/webp">
+          <img src="images/rose.jpg" alt="Beautiful rose flower" width="600" height="400" loading="lazy">
+        </picture>
+        
+        <figcaption>Beautiful Rose Flower</figcaption>
+      </body>
+    </html>
+
+==========================================================================================================================================================================================================================================
