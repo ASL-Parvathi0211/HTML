@@ -1,0 +1,130 @@
+# Tables in HTML
+  A table is a two dimensional matrix, consisting of rows and columns. Tables are used for displaying the data in columns on a web page. <TABLE> tag is used to create the tables in a webpage. It consists of several sub tags. They are <CAPTION>, <TR>, <TH>, <TD>, <COLGROUP>, <THEAD>, <TBODY>, <TFOOT>, tags
+
+Sub tags (or) sub elements of <TABLE> Tag:
+    Table caption
+      A table caption is defined using <CAPTION> </CAPTION> tags. The caption of a table is palced at the top of all table rows 
+  
+    Table Rows
+      A table row is defined using <TR> </TR> tags. The content of a table header row and data row are palced inside teh table row 
+    
+    Table Headers
+      A table header row is defined using <TH> </TH> tags. The content of a table header row is automatically centered and appears in bold face 
+
+    Table Data 
+      A table data is placed in the <TD> </TD> tags. There could be a single data cell or multiple data cells
+    
+    Colgroup Tag
+      It creates a column group. It format the columns of a table with specified width 
+
+    THEAD Tag 
+      It creates a table head when grouping rows 
+
+    TBODY Tag 
+      It creates a table body when grouping rows 
+    
+    TFOOT Tag
+      It creates a table foot when grouping rows
+
+Attributes of <Table> Tag: The attributes that can be included in the <table> tag are 
+  |Attribute Name |                     Meaning                                                                                                                                                       |
+  |   ALIGN       | Horizontal alignment is specified by the ALIGN attribute. It can be set to LEFT or CENTER or RIGHT                                                                                |
+  |   BGCOLR      | It specifies the background color to the table                                                                                                                                    |
+  |  BACKGROUND   | It specifies the background image of the table                                                                                                                                    |
+  |  VALIGN       | Vertical alignment is specified by the VALIGN attribute. It can be set to TOP, MIDDLE, or BOTTOM                                                                                  |
+  |   WIDTH       | Sets the WIDTH to a specific number of pixles or to a percentage of the available screen width. If width is not specified, the data cell is adjusted based on the cell data value |
+  |   HEIGHT      | Sets the WIDTH to a specific number of pixels or to a percentage of the available screen width. If width is not specified, the data cell is adjusted based on the cell data value |
+  |  BORDER       | Controls the border to be placed around the table. The border thickness is specified in pixels                                                                                    |
+  | BORDERCOLOR   | Controls the border color to be placed around the table                                                                                                                           |
+  | CELLPADDING   | This attribute controls the distance between the data in a cell and the boundaries of the cell                                                                                    |
+  | COLSPAN       | The COLSPAN attribute inside a <TH> or <TD> tag instructs the browser to makeup the cell defined by the tag takes up more than one column                                         |
+  |  ROWSPAN      | The ROWSPAN attribute allows a cell to take up more than one row                                                                                                                  |
+
+=========================================================================================================================================================================================================================================================
+
+Program to Design a Table with Caption, Align, Valign, Border, Bordercolor, Bgcolor, Width, Height, Colspan and rowspan attributes
+ <html>
+  <body>
+    <table align = "center" border = "5" bordercolor = "blue" width = "50%" height = "50%">
+      <caption> Stubent Table </caption>
+    <tr align = "center" valign = "middle" bgcolor = "red">
+      <th rowspan = 2> Name </th>
+      <th colspan = 3> Marks </th>
+    </tr>
+    <tr align = "center" valign = "middle" bgcolor = "red">
+      <th> sub1 </th>
+      <th> sub2 </th>
+      <th> sub3 </th>
+    </tr>
+    <tr align = "center" valign = "middle" bgcolor = "lightgreen">
+      <td> Ravi </td>
+      <td> 55 </td>
+      <td> 56 </td>
+      <td> 57 </td>
+    </tr>
+    <tr align = "center" valign = "middle" bgcolor = "lightgreen">
+      <td> Venu </td>
+      <td> 53 </td>
+      <td> 64 </td>
+      <td> 75 </td>
+    </tr>
+    </table>
+  </body>
+ </html>
+
+OUTPUT: 
+        Student Table
+ | Name    |       Marks        |
+ |         | Sub1 | Sub2 | Sub3 |
+ |---------|--------------------| 
+ | RAVI    | 55   | 56   | 57   |
+ | RAMU    | 35   | 56   | 67   |
+ | Venu    | 53   | 64   | 75   |
+============================================================================================================================================================
+
+Program for the employee
+ <html>
+  <head>
+    <title> Table element </title>
+  </head>
+  <body>
+    <center>
+      <table border= "1">
+        <caption> Employee Table </caption>
+        <tr>
+          <th> Empno </th>
+          <th> Ename </th>
+          <th> DOJ </th>
+          <th> Salary </th>
+        </tr>
+        <tr>
+          <td> 100 </td>
+          <td> Sai </td>
+          <td> 10-Jan-20 </td>
+          <td> 15000.00 </td>
+        </tr>
+        <tr>
+          <th> 101 </th>
+          <th> Sarma </th>
+          <th> 15-Jan-20 </th>
+          <th> 20000.00 </th>
+        </tr>
+        <tr>
+          <th> 102 </th>
+          <th> Sastry </th>
+          <th> 25-Jan-20 </th>
+          <th> 25000.00 </th>
+        </tr>
+      </table>
+    </center>
+  </body>
+ </html>
+
+OUTPUT:
+    Employee Table
+ |EMP NO | ENAME  | DOJ       | Salary   |
+ | 100   | Sai    | 10-Jan-20 | 15000.00 |
+ | 101   | Sarma  | 15-Jan-20 | 20000.00 |
+ | 102   | Sastry | 25-Jan-20 | 25000.00 |
+
+===================================================================================================================================================================
