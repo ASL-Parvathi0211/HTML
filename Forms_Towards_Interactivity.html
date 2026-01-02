@@ -1,0 +1,197 @@
+# Explain about Forms_towards interactivity
+  Forms are used to provide the interaction between user and web application. It accepts the user information and send that to web server. Webserver reads the sended information and store that into database. <FORM> tag is used to develop the forms. Form is a container which place the user interactivity elements. They are textbox, buttons, checkboxes, radio buttons, listboxes, combo boxes etc,.
+
+Attributes of <form> tag:
+ | Attribute  | Value    |   Description                                                    |
+ |------------|----------|------------------------------------------------------------------|
+ | method     | get/post | Specifies the HTTP method to use when sending form-data          |
+ | name       | text     | Specifies the name of a form                                     |
+ | Action     | URL      | Specifies where to send the form-data when a form is submitted   |
+
+Syntax:
+  <form name = ""method = "get/post" action"">
+    ----user interactive elements
+  </form>
+
+ The <form> element can contain one or more of the following form elements:
+  | Tag        |            Description                                         |
+  |------------|----------------------------------------------------------------|
+  | <input>    | Defines an input control                                       |
+  | <textarea> | Defines a multiline input control (text area)                  |
+  | <label>    | Defines a label for an <input> element                         |
+  | <fieldset> | Groups relatedelements in a form                               |
+  | <legend>   | Defines a caption for a <fieldset> element                     |
+  | <select>   | Defines a drop-down list                                       |
+  | <optgroup> | Defines a group of related options in a drop-down list         |
+  | <option>   | Defines an option in a drop-down list                          |
+  | <button>   | Defines a clickable button                                     |
+  | <datalist> | Specifies a list of pre-defined options for input controls     |
+  | <keygen>   | Defines a key-pair generator fields (for forms)                |
+  | <output>   | Defines the result of a calculation                            |
+
+1. <input> tag: The <input> tag specifies an input field where the user can enter data.
+    <input> elements are used within a <form> element to declare input controls that allow users to input data.
+    An input field can vary in many ways, depending on the type attribute
+
+    Attributes of <input> tag
+     | Attribute   | Value          |   Description                                                            |
+     |-------------|----------------|--------------------------------------------------------------------------|
+     | name        | text           | Specifies the anme of an <input> element                                 |
+     | size        | number         | Specifies the width, in characters, of an <input> element                |
+     | value       | text           | Specifies the value of an <input> element                                |
+     | maxlength   | number         | specifies the maximum number of characters allowed in an <input> element |
+     | type        | button         | To create a button                                                       |
+     |             | checkbox       | To create a checkbox                                                     |
+     |             | color          | To create a color box                                                    |
+     |             | date           | To create a date box                                                     |
+     |             | datetime       | To create a date and time box                                            |
+     |             | datatime-local | To create a date and time for local                                      |
+     |             | Email          | To create a email box                                                    |
+     |             | file           | To create a file uploading box                                           |
+     |             | hidden         | To create a hidden box                                                   |
+     |             | image          | To create an image box                                                   |
+     |             | month          | To createa month box                                                     |
+     |             | number         | To create a number box                                                   |
+     |             | password       | To create a password box                                                 |
+     |             | radio          | To create a radio button                                                 |
+     |             | reset          | To create a reset button                                                 |
+     |             | search         | To create a search box                                                   |
+     |             | submit         | To create a submit button                                                |
+     |             | text           | To create a text button                                                  |
+     |             | time           | To create a time box                                                     |
+     |             | url            | To create a url box                                                      |
+     |             | week           | To create a week box                                                     |
+
+2. <textarea> tag: The HTML <textarea> element represents a multi-line plain-text editing control
+  Example: <textarea rows = "4" cols = "50">
+            At w3schools.com you will learn how to make a website. We offer free tutorials in all web developement technologies
+          </textarea>
+
+3. <label> tag: The HTML label element (<label>) represents a caption for an item in a user interface
+  Example: <label for = "username"> Click me </label>
+            <input type = "text" id = "username">
+
+4. <fieldset> tag: The <fieldset> tag is used to group related elements in a form. The <fieldset> tag draws a box around the related elements
+  Example: <form>
+    <fieldset>
+      <legend> Personalia: </legend>
+      Name: <input type = "text"><br>
+      email: <input type = "text"><br>
+      Date of Birth: <input type = "text">
+    </fieldset>
+  </form>
+
+5. <legend> tag: The HTML <legend> tags used to define a caption for <fieldset> tag
+  Example: <form>
+    <fieldset>
+      <legend> Personalia: </legend>
+      Name: <input type = "text"><br>
+      email: <input type = "text"><br>
+      Date of Birth: <input type = "text">
+    </fieldset>
+  </form>
+
+6. <select> tag: The HTML select (<select>) element represents a control that presents a menu of options. The options within the menu are represented by <option> elements, which can be grouped by <optgroup> elements. Options can be-selected for the user
+  Example: <select name = "select">
+    <option value = "value1"> Value1 </option>
+    <option value = "value2" selected> Value2 </option>
+    <option value = "value3"> Value3 </option>
+  </select>
+
+7. <optgroup> Tag: The <optgroup> is used to group related options in a drop-down list. If you have a long list of options, groups of related options are eaiser to handle for a user
+  Example: <select>
+    <optgroup label = "Swedish Cars">
+      <option value = "volvo"> Volvo </option>
+      <option value = "saab"> Saab </option>
+    </optgroup>
+    <optgroup label = "German Cars">
+      <option value = "mercedes"> Mercedes </option>
+      <option value = "audi"> Audi </option>
+    </optgroup>
+  </select>
+
+8. <option> tag: The <option> tag defines an option in a select list. <option> elements go inside a <select> or <datalist> element
+  Example: <select>
+    <option value = "volvo"> Volvo </option>
+    <option value = "saab"> Saab </option>
+    <option value = "opel"> Opel </option>
+    <option value = "audi"> Audi </option>
+  </select>
+
+9. <button> tag: The HTML <button> tag is used for creating a button within HTML form. You can also use <input> tag to create similar buttons
+  Example: <!DOCTYPE html>
+  <html>
+    <head>
+      <title> HTML Button Tag </title>
+    </head>
+    <body>
+      <form>
+        <button name = "button" value = "ok" type = "button"> Click Me </button>
+      </form>
+    </body>
+  </html>
+
+10. <datalist> tag: The <datalist> tag specifies a list of pre-defined options for an <input> element. The <datalist> tag is used to provide an "autocomplete" feature on <input> element. Users will see a drop-down list of pre-defined options as they input data. Use the <input> element's list attribute to bind it together with a <datalist> element 
+  Example: <label> choose a browser from this list:
+    <input list = "browsers" name = "myBrowser"/>
+  </label>
+  <datalist id = "browsers">
+    <option value = "Chrome">
+      <option value = "Firefox">
+         <option value = "Internet Explorer">
+          <option value = "Opera">
+            <option value = "Safari">
+              <option value = "Microsoft Edge">
+  </datalist>
+
+11. <keygen> tag: The <keygen> tag specifies a key-pair generator field used for forms. When the form is submitted, the private key is stored locally, and the public key is sent to the server
+  Example: <form action = "demo_keygen.asp" method = "get">
+    Username: <input type = "text" name = "usr_name">
+    Encryption: <keygen name = "security">
+    <input type = "submit">
+  </form>
+
+12. <output> tag: The <output> tag represents the result of a calculation (like one performed by a script)
+  Example: <form on input = "x.value=parseInt(a.value)+parseInt(b.value)">0
+    <input type = "range" id = "a" value = "50">100
+    +,input type = "number" id = "b" value = "50">
+    = <output name = "x" for = "a b"></output>
+  </form>
+
+===================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+Program to develop a Regristration Form 
+  <html>
+    <head>
+      <title> Regristration Page </title>
+    </head>
+    <body bgcolor = lightgreen>
+      <center><h1> Regristration page </h1></center>
+      <hr>
+      <form name = "MyForm" method = "post" action = "http;//localhost;80/ggrweb/userpage.asp">
+        <pre>
+          Enter User Name: <input type = "text" name = "t1"><br>
+          Enter Password: <input type = "password" name = "t2"><br>
+          ReEnter password: <input type = "password" name = "t3"><br>
+          Select Gender: <br>
+          <input type = radio name = r1> Male 
+          <input type = radio name = r2> Female
+          Select Hobbies: <br>
+          <input type = checkbox name = c1> Music
+          <input type = checkbox name = c2> Shattle
+          <br>
+          Select Country:
+          <select Country:
+          <select name = country>
+            <option> India </option>
+            <option> Canada </option>
+            <option> NewYork </option>
+            <br>
+            <input type = button value = register>
+          </select>
+        </pre>
+      </form>
+    </body>
+  </html>
+
+===================================================================================================================================================================================================================================================================================================================================================================================

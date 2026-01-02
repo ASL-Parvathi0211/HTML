@@ -1,0 +1,72 @@
+Exception Handling
+  In Javascript a warning or error called execution which arises during the program execution. There are three types of errors in programming
+  1. Syntax errors: According to computer science a syntax error in the syntax of a sequence of characters or tokens that is included to be written in a particular programming language or it is also the compile time error. Tf the syntax is not correct then it will give an error message 
+  2. Logical errors: It is the most difficult errors to be tracked to be traced as it is the error on the logic part of the coding or logical error and terminate abnormally
+  3. Runtime errors: A runtime error is an error that occurs during the running of the program also known as exception 
+  
+  Javascript can implements exception handling using try, catch, finally and throws key words 
+  The try statements lets you test a block of code for errors. The catch statement lets you handle the errors. The throw statement lets you create custom errors. The finally statement lets you execute code after try and catch of the result 
+  Syntax: <script type = "text/Javascript">
+           try 
+           {
+            code to be execute;
+           }
+           catch (error)
+           {
+            code to be run if an exception occurs;
+           }
+           finally
+           {
+            code that is always executed on Exception handling 
+           }
+          </script>
+        
+  Example: Exception Handling 
+          <html>
+            <head>
+              <title> Using of try-catch blocks </title>
+            </head>
+            <body>
+              <script language = "Javascript">
+                var a=10; b=0;
+                try
+                {
+                  document.write(a/b);
+                }
+                catch(ArithmeticException e)
+                {
+                  document.write("<h1> A number cannot divide by zero </h1>");
+                }
+              </script>
+            </body>
+          </html>
+
+  Example 2: <!--Throw Demo-->
+            <html>
+              <head>
+                <title> Using try-catch blocks </title>
+              </head>
+              <body>
+                <script language = "Javascript">
+                  var x=prompt("Enter a number between 0 and 5", " ");
+                  try
+                  {
+                    if (x>5)
+                    throw "error1";
+                      else if (x<0)
+                      throw "error2";
+                  }
+                  catch(e)
+                  {
+                    if(e=="error1")
+                    alert("you entered value is Above 5");
+                      if(e=="error2")
+                      alert("you entered value is lessthan 0");
+                  }
+                  finally
+                  {
+                    document.write("end of the program");
+                  }
+                </script>
+              </body>
+            </html>

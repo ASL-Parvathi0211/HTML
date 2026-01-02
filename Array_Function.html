@@ -1,0 +1,140 @@
+Object based Array Functions 
+  The array object lets you store multiple value in a single variable. It stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type 
+  Syntax to create an array object: 
+    var Array_Name = new Array("Item1", "Item2", , ,)
+  
+  Example: var fruits = new array("Apple", "Banana", "Mango")
+   THe array parameter(items) is a list of strings or integers. When you specify a single numeric parameter with the array constructor. The maximum length allowed for an array is 4,294, 965,295 
+
+  Javascript supports the following object based array functions 
+    1. Contact(): It returns new array comprised of this array joined with other arrays and/or value 
+      Syntax: array1.contact(array2);
+      Example: <html>
+                <head>
+                    <title> Array contact method </title>
+                </head>
+                <body>
+                    <script type = "text/Javascript">
+                        var alpha = ["a", "b", "c"];
+                        var numeric = [1, 2, 3];
+                        var alphanumeric = alpha.concat(numeric);
+                        document.write("alphanumeric:"+alphanumeric);
+                    </script>
+                </body>
+               </html>
+
+          Output: alphanumeric: a, b, c, 1, 2, 3
+
+    2. Join(): Javascript array Join() method joins all the elements of an array into a string 
+      Syntax: array.join(separator);
+      Example: <html>
+                 <head>
+                  <title> Array Join method </title>
+                 </head>
+                 <body>
+                  <script type = "text/Javascript">
+                    var arr = new Array ("First", "Second", "Third");
+                    var str = arr.join();
+                    document.write("str:"+str);
+                    var str = arr.Join(",");
+                    document.write("str:"+str);
+                    var str = arr.join("+")
+                    document.write("str:"+str);
+                  </script>
+                 </body>
+               </html>
+
+          Output: str: First, Second, Third
+                  str: First, Second, Third
+                  str: First+Second+Third 
+      
+    3. POP(): Javascript array pop() method removes the last element from an array and returns that element
+      Syntax: array.pop();
+      Example: <html>
+                 <head>
+                  <title> Array pop method </title>
+                 </head>
+                 <body>
+                  <script type = "text/javascript">
+                    var numbers = [1, 4, 9];
+                    var elements = numbers.pop()
+                    document.write("element is:"+element);
+                    var element = numbers.pop();
+                    document.write("element is:"+element);
+                  </script>
+                 </body>
+               </html>
+
+          Output: element is:9 
+                  element is:4 
+
+    4. Push(): Javascript array push() method appends the given elements in the last of the array and returns the length of the array
+      Syntax: array.push(element1, element2, --- );
+      Example: <html>
+                  <head>
+                    <title> Array push method </title>
+                  </head>
+                  <body>
+                    <script type = "text/javascript">
+                      var numbers = new array(1, 4, 9);
+                      var length = numbers.push(10);
+                      document.write("new numbers is:"+numbers);
+                      var length = numbers.push(20);
+                      document.write("new numbers is:"+numbers);
+                    </script>
+                  </body>
+               </html>
+
+        Output: new numbers is:1, 4, 9, 10
+                new numbers is:1, 4, 9, 10, 20
+
+    5. array reverse() method: Javascript array reverse() method reverses the element of an array. The first element becomes the last and the last becomes the first 
+      Syntax: array.reverse();
+      Example: <html>
+                  <head>
+                    <title> array reverse method </title>
+                  </head>
+                  <body>
+                    <script type = "text/javascript">
+                      var arr = [0, 1, 2, 3].reverse();
+                      document.write("reversed array is:"+arr);
+                    </script>
+                  </body>
+               </html>
+
+          Output: Reversed array is: 3 2 1 0
+
+    6. Array sort() method: Javascript array sort() method sorts the elements of an array 
+      Syntax: array2 = array.sort(array 1);
+      Example: <html>
+                 <head>
+                  <title> Array sort method </title>
+                 </head>
+                 <body>
+                  <script type = "text/javascript">
+                    var arr = new array("orange", "mango", "banana", "sugar");
+                    var sorted = arr.sort();
+                    document.write("sorted array ="+sorted);
+                  </script>
+                 </body>
+               </html>
+
+        Output: sorted array: banana, mango, orange, sugar 
+
+    7. array slice() method: Javascript array slice() method extracts a section of an array and returned a new array 
+      Syntax: array.slice(begin index number, end);
+      Example: <html>
+                 <head>
+                  <title> array slice method </title>
+                 </head>
+                 <body>
+                  <script type = "text/javascript">
+                    var arr = ["orange", "mango", "banana", "sugar", "tea"];
+                    document.write("arr.slice(1,2):"+arr.slice(1,2));
+                    document.write("<br>arr.slice(1,3):"+arr.slice(1,3));
+                  </script>
+                 </body>
+               </html>
+
+          Output: arr.slice(1,2): Mango
+                  arr.slice(1,2): mango, banana 

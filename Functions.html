@@ -1,0 +1,103 @@
+Functions
+  A javascript function is a block of code to perform a particular task. A javascript function is executed when calls it
+  A javascript name can contain letters (alphabets), digits, unferscore and dollar signs. In the parenthesis may contain parameter names separated by commas (parameter1, parameter2, -----)
+  The code to be executed by the function is placed inside curly brackets: {} 
+
+  Syntax:  function function_name(parameter1, parameter2)
+           {
+            code to be executed 
+            - - - - - 
+            - - - - -  
+           }
+
+  Example: <!--Functions concept-->
+           <html>
+            <head>
+                <title> Javascript functions </title>
+                <script type = "Text/Javascript">
+                    var a=10; b=5;
+                    function add()
+                    {
+                    var c=25; d=25;
+                    d.w("<br> sum = " +(c+d));
+                    }
+                    function sub()
+                    {
+                    document.write("<br> subtraction="+(a-b));
+                    }
+                    function mul()
+                    {
+                    document.write("<br>multiplication="+(a*b));
+                    }
+                    function div()
+                    {
+                    document.write("<br>division="+(a/b));
+                    }
+                </script>
+            </head>
+            <body>
+                <center>
+                    <input type = "button" value = "sum" onclick = "Add()">
+                </center><br>
+                <center>
+                    <input type = "button" value = "subtraction" onclick = "sub()">
+                </center><br>
+                <center>
+                    <input type = "button" value = "multiplication" onclick = "mul()">
+                </center><br>
+                <center>
+                    <input type = "button" value = "Division" onclick = "div()">
+                </center>
+            </body>
+           </html>
+
+  Example 2: <!--Functions concept-->
+            <html>
+                <head>
+                    <title> Functions concept </title>
+                </head>
+                <body>
+                    <script>
+                        function function1 ()
+                        {
+                            document.write("T am from function1");
+                        }
+                        function function2 ()
+                        {
+                            document.write("I am from function2");
+                        }
+                        function1();
+                        function2();
+                    </script>
+                </body>
+            </html>
+
+  Example 3: <!--Functions concept-->
+            <html>
+                <body>
+                    <h2> Javascript Functions </h2>
+                    <script>
+                        myfuncion();
+                        function myfunction()
+                        {
+                            var name = "ASLParvathi"
+                            document.write(name);
+                        }
+                    </script>
+                </body>
+            </html>
+
+  Example 4: <!--Functions concept-->
+            <html>
+                <body>
+                    <h2> Javascript Functions </h2>
+                    <script>
+                        function myfunction(p1, p2)
+                        {
+                            return(p1*p2);
+                        }
+                        document.write(myfunction(5,5));
+                    </script>
+                </body>
+            </html>
+

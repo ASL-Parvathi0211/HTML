@@ -1,0 +1,160 @@
+# Frames 
+  Frames are used to divide the web page into no.of parts as horizontally or vertically, and we can set different documents/files/images to different frames. To divide the page into rows and columns we use <FRAMESET> tag. The <FRAMESET> tag contains one sub tag this is <FRAME> tag
+  Frameset is the main tag to set the frames. It contains attributes "cols" and "rows". These two attributes are used to devide the pageas rows and columns. It contains one sub tag that is <frame> tag. Is used to set the frame in page. It contains two attributes name and src. Name is used to specify the name of the frame and src is used to set the file to the <frame>
+
+Attributes of <frameset> tag
+ | Attribute    |                     Description                                                    |
+ |--------------|------------------------------------------------------------------------------------|
+ | cols         | Thsi attribute divide the webpage as column size                                   |
+ | rows         | This attribute divide the webpage as row wise                                      |
+ | border       | This attribute is used to increase or decrease border size between two frames      |
+ | bordercolor  | This attribute is used to give border color between two frames                     |
+ | frameborder  | This attributs is used to display or hide the border                               |
+ | framespacing | This attribute is used to give a space between two frames                          |
+
+ Syntax:
+  <Frameset cols = "%value, %value" rows = "%value, %value" border = "value"> 
+      <frame name = "frame_name" src = "source_file">
+        <frame name = "frame_name" src = "soucre_file">
+  </Frameset>
+
+<frame> tag Attributes
+ | Attributes     |    Description                                                                                                                                                                                                                                                                                                                     |
+ |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+ | SRC            | This attribute is used to give the file name that should be loaded in the frame. Its value can be any URL. For ex, src = "/html/top_frame.htm" will load an HTML file available in html directory                                                                                                                                  |
+ | name           | This attribute allows you to give a name to a frame. It is used to indicate which frame a documet should be loaded into. This is especially important when you want to create link in one frame that load pages into an another frame, in which case the second frame needs a name to identify itself as the terget of the link    |
+ | frameborder    | This attribute specifies whether or not the borders of that frame are shown: It overrides the value given in the frameborder attribute on the <frameset> tag if one is given, and this can take values either 1(yes) or 0(no)                                                                                                      |
+ | marginwidth    | This attribute allows you to specify the width of the space between the left and right of the frame's borders and the frame's borders and the frame's content. The value is given in pixels. For example marginwidth = "10"                                                                                                        |
+ | marginheight   | This attribute allows you to specify the height of the space between the top and bottom of the frame's borders and its contents. The value is given in pixels. For example marginheight = "10"                                                                                                                                     |
+ | noresize       | By default you can resize any frame by clicking and dragging on teh borders of a frame. The noresize attributes preventsa user from being able to resize the frame. For example noresize = "noresize"                                                                                                                              |
+ | scrolling      | This attribute controls the appearence of the scrollbars that appear on the frame. This takes values either "yes", "no" or "auto". For example scrolling = "mo" means it should not have scroll bars                                                                                                                               |
+ | Longdesc       | This attribute allows you to provide a link to another page containing a long description of the contents of the frame. For example longdesc = "framedescription.htm"                                                                                                                                                              |
+
+Horizontal Frames:
+A webpage is divided into more than one parts as horizontally is called as Horizontal frames. For this we have to use rows attribute in <frameset> tag
+
+=============================================================================================================================================================================================================================================================================================================================================================================================================================
+
+Program to create horizontal sub frames adn plate into main frame
+<HTML>
+  <head>
+    <title> EX ON VERTICAL FRAMES </title>
+  </head>
+  <FrameSet rows = "30%;35%;30">
+    <Frame src = "frame1.html" SCROLLING = 'NO' noresize> 
+      <Frame src = "farme2.html" SCROLLING = "NO">
+        <Frame src = "frame3.html" SCROLLING = "NO">
+  </FrameSet>
+</HTML>
+
+Frame1.html 
+ <html>
+  <body bgcolor = RED>
+    <center>
+      <h1> This is frame1 </h2>
+    </center>
+  </body>
+ </html>
+
+Frame2.html 
+ <html> 
+  <body bgcolor = ORANGE>
+    <center>
+      <h1> This is Frame2 </h2>
+    </center>
+  </body>
+ </html>
+
+Frame3.html 
+ <html>
+  <body bgcolor = YELLOW>
+    <center>
+      <h1> This is Frame3 </h2>
+    </center>
+  </body>
+ </html>
+
+===========================================================================================================================================================================================================================================================================================================================
+
+Vertical Frames: 
+  A webpage is divided into more than one aprts as vertically is called as vertical frames. For this we have to use cols attribute in <frameset> tag
+
+ Program to create vertical sub frames and place into main frames:
+   <html>
+    <head>
+      <title> EX ON VERTICAL FRAMES </title>title>
+    </head>
+    <frameSet cols = "30%;35%;30%">
+      <frame src = "frame1.html" SCROLLING = "NO" noresize> 
+        <frame src = "frame2.html" SCROLLING = "NO">
+          <frame src = "Frame3.html" SCROLLING = "NO">
+    </frameSet>
+   </html>
+
+===========================================================================================================================================================================================================================================================================================================================================
+
+Program to divide the main frame into vertically and horizontally 
+mypicture.html 
+  <html>
+    <head>
+      <title> Image page </title>
+    </head>
+    <body>
+      <IMG src = "brose.jpg" width = 252 height = 200>
+    </body>
+  </html>
+
+  links.html 
+    <html>
+      <head>
+        <title> Links page </title>
+      </head>
+      <body>
+        <a href = "page1.html" target = "dispaly"> let's see page 1 </a> <br>
+        <a href = "page2.html" target = "dispaly"> let's see page 2 </a> <br>
+        <a href = "page3.html" target = "dispaly"> let's see page 3 </a> <br>
+      </body>
+    </html>
+
+  Page1.html 
+    <html>
+      <body bgcolor = RED>
+        <center>
+          <h1> This is page1 </h1>
+        </center>
+      </body>
+    </html>
+
+  Page2.html 
+  <html>
+    <body bgcolor = ORANGE>
+      <center>
+        <h1> This is page2 </h1>
+      </center>
+    </body>
+  </html>
+
+  Page3.html 
+  <html>
+    <body bgcolor = YELLOW>
+      <center>
+        <h1> This is page3 </h1>
+      </center>
+    </body>
+  </html>
+
+  Main_Frame.html 
+    <html>
+      <head>
+        <title> EX on display Frames </title>
+      </head>
+      <Frameset Cols = "25%, 50%">
+        <frameSet rows = "50%, 50%">
+          <Frame src = "mypicture.html" scrolling = "no" noresize>
+            <Frame src = "links.html" noresize>
+        </frameSet>
+        <Frame src = "page1.html" NAME = "display">
+      </Frameset>
+    </html>
+
+=======================================================================================================================================================================================================================================================================================================================

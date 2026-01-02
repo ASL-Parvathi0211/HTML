@@ -1,0 +1,226 @@
+Control Statements
+  Control statements are used to execute the statements based on the conditions is satisfied. Javascript supports the following control statements 
+    i. Conditional Control Statements 
+      These statements are used to execute based on the condition is satisfied. Javascript supports the following conditional control statements 
+
+        a. if statement
+          In the if statement, if the condition is true it will execute immediate statement and condition with next statements 
+          Syntax: if (condition)
+                  statement;
+                  next statements;
+
+          Example: <!--To check Absolute Number or not-->
+                   <html>
+                    <head>
+                        <title> if statement </title>
+                    </head>
+                    <body>
+                        <script>
+                          var n=-10;
+                          if (n<0)
+                          n=-n;
+                          document.write("Absolute Number="+n);
+                        </script>
+                    </body>
+                   </html>
+
+       b. if_else statement
+          In the if else statement, if the condition is true it will execute true block of stattements otherwise false block of statements and continue with next statements 
+          Syntax: if (condition)
+                  {
+                    true block of statements;
+                  }
+                   else
+                 {
+                   false block of statements;
+                 }
+                  next statements;
+
+          Example: <!--To check a number is even or odd-->
+                   <html>
+                    <head>
+                        <title> if else statement </title>
+                    </head>
+                    <body>
+                        <script>
+                          var n=10;
+                          if(n%2==0)
+                          document.write(n+"Is even");
+                            else
+                            document.write(n+"Is odd");
+                        </script>
+                    </body>
+                   </html>
+
+        c. else_if statement: 
+          A if statement containes number of alternative if statement is called else_if lader statement
+          Syntax: if (condition 1)
+                  statement 1;
+                  else if (condition 2)
+                  statements 2;
+                   ;
+                   ;
+                   ;
+                   else
+                   statement n;
+                   next statements;
+
+          Example: <!--To print Grade message based on marks-->
+                   <html>
+                    <head>
+                        <title> else_if statement </title>
+                    </head>
+                    <body>
+                        <script>
+                          var marks = 80;
+                          if (marks >=70)
+                          document.write ("Distinction")
+                            else if (marks>=60)
+                            document.write("First Class")
+                              else if(marks>=50)
+                              document.write("Second Class")
+                                else if(marks>=35)
+                                document.write("Pass")
+                                  else
+                                  document.write("Fail")
+                        </script>
+                    </body>
+                   </html>
+
+        d. Switch Statements 
+          Switch statement executes directly particular case of the switch statement otherwise it will execute default statement 
+          Syntax: Switch (variable)
+                  {
+                    case 1: statement 1; break;
+                    case 2: statement 2; break;
+                    case 3: statement 3; break;
+                    ;
+                    ;
+                    default:
+                    default_statement;
+                  }
+
+          Example: <!--Program to print name of the day in the week-->
+                   <html>
+                    <head>
+                        <title> Switch statement </title>
+                    </head>
+                    <body>
+                        <script language ="Java Script"
+                                Type = "Text/Javascript">
+                             var day = 4;
+                             switch(day)
+                              {
+                                case 1: document.write("Sunday"); break;
+                                case 2: document.write("Monday"); break;
+                                case 3: document.write("Tuesday"); break;
+                                case 4: document.write("Wednesday"); break;
+                                case 5: document.write("Thursday"); break;
+                                case 6: document.write("Friday"); break;
+                                case 7: document.write("Saturday"); break;
+                                default:
+                                document.write("Invalid Day Value");
+                              }
+                        </script>
+                    </body>
+                   </html>
+
+    ii. Looping Statement 
+      Javascript supports the following loop statements
+       
+        a. while loop
+          It is a entry-controlled looping statement 
+          It is also called Pre-Test condition 
+          It will execute until the condition is false 
+          Synatax: while (condition)
+                   {
+                    looping statements;
+                    Increment/Decrement Variable;
+                     
+                   }
+                   Next statements;
+
+          Example: <!--Program to print 1 to 10 numbers-->
+                   <html>
+                    <head>
+                        <title> while loop statement </title>
+                    </head>
+                    <body>
+                        <script>
+                            var n=1;
+                            while (n<=10)
+                            document.write("<br>"+n);
+                            n++;
+                        </script>
+                    </body>
+                   </html>
+
+          Example 2: <!--Factorial value-->
+                     <html>
+                        <head>
+                            <title> Factorial value </title>
+                        </head>
+                        <body>
+                            <script>
+                                var n=5; i=1; f=1;
+                                while (i<=n)
+                               {
+                                f = f*i;
+                                i++;
+                               }
+                               document.write("factorial value of" +n+"="+f);
+                            </script>
+                        </body>
+                     </html>
+
+        b. do_while loop 
+          It is exist controlled looping statement
+          It is also called post test condition
+          It will execute untill the condition is false
+          Even the first time condition false, looping statements are executed one time 
+
+          Example: <!--Program to calculate sum of 1 to 100-->
+                   <html>
+                    <head>
+                        <title> do_while loop </title>
+                    </head>
+                    <body>
+                        <script>
+                            var n=1; sum=0;
+                            do
+                            {
+                                document.write("<br>"+n);
+                                sum = sum+nn++;
+                            } while (n<=10);
+                            document.write("sum of 1 to 10 ="+sum);
+                        </script>
+                    </body>
+                   </html>
+
+        c. for loop statement 
+          For loop statement consists of three expressions Initialization, Condition, Increment/Decrement variable
+          Synatax: for (Initialization; condition; Increment/Decrement variable)
+                   {
+                    looping statement
+
+
+                   }
+                   next statemetns
+
+          Example: <!--Program to calculate Factorial-->
+                   <html>
+                    <head>
+                        <title> For loop statement </title>
+                    </head>
+                    <body>
+                        <script>
+                            var n = 5; i; f=1;
+                            for (i=1; i<=n; i++)
+                            {
+                                f = f*i;
+                            }
+                            document.write("Factorial value="+f);
+                        </script>
+                    </body>
+                   </html>
+

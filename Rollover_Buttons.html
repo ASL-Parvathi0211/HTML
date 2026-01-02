@@ -1,0 +1,41 @@
+Rollover Buttons 
+  A rollover button is a dynamic web button that changes appearance depending on the location of the user's mouse pointer. It contains three states normal, over and down.
+  The normal state appears when your mouse is off button, the over state applies when your mouse rolls over the button and the down state applies to when you click on the button. 
+  Javascript is commonly used to create these rollover effects, using the "on mouse over" event handler to trigger the rollover graphic and "on mouse out" event handler to return the graphic to its original state. 
+
+  Example: <html>
+              <head>
+                <title> Example of event handling </title>
+              </head>
+              <script language = "Javascript">
+                function message1()
+                {
+                    alert("This page has unloaded");
+                }
+                function clicked1()
+                {
+                    alert("You clicked the button");
+                }
+                function clicked2()
+                {
+                    alert("You clicked to button");
+                }
+                function mouse1()
+                {
+                    alert("mouse over the link");
+                }
+                function mouse2()
+                {
+                    alert("mouse over the button");
+                }
+              </script>
+              <body onload = "message1()" onunload = "message2()">
+                <p>
+                    <a href = "#" onmouseover = "mouse1()" onclick = "clicked()"> a hyperlink </a>
+                </p>
+                <form>
+                    <input type = "button" value = "click me" onclick = "Clicked2()" onmouseover = "mouse2()">
+                </form>
+              </body>
+           </html>
+           

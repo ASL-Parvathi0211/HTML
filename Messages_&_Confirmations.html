@@ -1,0 +1,76 @@
+Messages & Confirmations 
+  Javascript provides some inbuilt methods or function which are used to give specific kind of messages and confirmations to the users. Confirmations are most often used to confirm important that are taking place on a website
+    1. alert() 
+      The alert() method displays an alert box with a specified message and an ok button. The alert box takes the focus away from the current window, and forces the web browser to read the message 
+      It prevents the user from accessing other parts of the web page wntil the laert box is closed.It is mostly used to give a warning message to the users. 
+      For example, if one input field requires entering some text but the user does not provide any input, then as a part fo a validation, you can use alert box to give a warning message 
+
+      Example: <html>
+                 <head>
+                    <title> alert function </title>
+                 </head>
+                 <body>
+                    <script type = "text/Javascript">
+                        function warn()
+                        {
+                            alert("This is a warning message");
+                        }
+                        <h3> click the following button to see the result </h3>
+                        <form>
+                            <input type = "button" value = "click me" onclick = "warn">
+                        </form>
+                    </script>
+                 </body>
+               </html>
+
+    2. confirm()
+      The confirm() method displays a dialog box with a specified message, along with an ok and cancel buttons. A confirm box is often used if you want the user to verify or accept something. The confirm box takes the focus away from the current window, and forces the web browser to read the message. It also prevent the user from accessing other parts of the web page until the box is closed. The confirm() method returns True if the user clicked ok and false otherwise. 
+      
+      Example: <html>
+                 <head>
+                    <title> confirm function </title>
+                 </head>
+                 <body>
+                    <script type = "text/javascript">
+                        function confirmation()
+                        {
+                            var retval = confirm("Do you want to continue");
+                            if(retval==true)
+                            {
+                                document.write("User wants to continue");
+                            }
+                            else
+                            {
+                                document.write("User does not want to continue");
+                            }
+                        }
+                    </script>
+                    <h3> Click the following button to see the result </h3>
+                    <form>
+                        <input type = "button" value = "click me" onclick = "confirmation()">
+                    </form>
+                 </body>
+               </html>
+               
+    3. Prompt()
+      The prompt() method displays a dialog box that prompts the visitor for input. A prompt box is often used if you want the user to input a value before entering a page 
+      When a prompt box pop up, the user will have to click either ok or cancel to proceed after entering an input value. It prevents the user from accessing other parts of the page until the box is closed. The prompt() method returns the input value if the user clicks ok. If the user click cancel the method returns "NULL"
+
+      Example: <html>
+                 <head>
+                    <title> prompt function </title>
+                 </head>
+                 <body>
+                    <script type = "text/javascript"> 
+                        function getvalue()
+                        {
+                            var retval = prompt("Enter your name:", " ");
+                            document.write("You have entered:"+retval);
+                        }
+                    </script>
+                    <h3> Click the following button to see the result </h3>
+                    <form>
+                        <input type = "button" value = "click me" onclick = "getvalue()">
+                    </form>
+                 </body>
+               </html>

@@ -1,0 +1,75 @@
+# What is CSS? Explain types of CSS with examples?
+  Cascading Style Sheets (CSS) provide easy and effective alternatives to specify various attributes for the HTML tags. Using CSS you can specify a number of style properties for a given HTML element. Each property has a name and a value, seperated by a colon(:). Each property declaration is seperated by a semi-colon(;)
+
+CSS are 3 types
+1. Inline Style Sheet: Define style sheet rules directly along-with the HTML elements using style attribute 
+    You can apply style sheet rules directly to any HTML element using style attribute of the relevant tag. This should be done only when you are interested to make a particular change in any HTML element only 
+    Rules defined inline with the element overrides the rules defined in an external CSS file as well as the rules defined in element <style></style>
+
+    Example: <html>
+        <head>
+            <title> HTML Inline CSS </title>
+        </head>
+        <body>
+            <p style = "color:red;"> This is red </p>
+            <p style = "font-size:20px;"> This is thick </p>
+            <p style = "color:green;"> This is green </p>
+            <p style = "color:green;" font-size:20px;> This is thick and green </p>
+        </body>
+    </html>
+
+2. Internal Style Sheet: Define style sheet rules in header section of the HTML document using <style></style> tag
+    If you want to apply style sheet rules to s single document only, then you can include those rules in header section of the HTML document using <style></style> tag
+    Rules defined in internal style sheet overrides the rules defined in an external CSS files
+
+    Example: <html>
+        <head>
+            <title> HTML Internal CSS </title>
+            <style type = "text/css">
+                .red{
+                    color:red;
+                }
+                .thick 
+                {
+                    font-size:20px;
+                }
+                .green{
+                    color:green;
+                }
+            </style>
+        </head>
+        <body>
+            <p class = "red"> This is red Color Information </p>
+            <p class = "thick"> This is thick color inforamtion </p>
+            <p class = "green"> This is green color information </p>
+            <p class = "thick green"> This is thick and green color information </p>
+        </body>
+    </html>
+
+3. External Style Sheet: Define style sheet rules in a separate .css file and then include that file in your HTML <link> tag
+    If you need to use your style sheet to various pages, then its always recommended to define a common style sheet in a separate file. A cascading style sheet file will have extension as .css and it will be included in HTML files using <link> tag
+    Consider we define a style sheet file style.css which has following rules
+
+    .red{
+        color:red;
+    }
+    .thick{
+        font-size:20px;
+    }
+    .green{
+        color:green;
+    }
+    Here we defined three CSS rules which will be applicable to three different classes defined for the HTML tags. I suggest you should not bother about how these rules are being defined beacuse you can learn them while studying CSS. 
+
+<html>
+    <head>
+        <title> HTML External CSS </title>
+        <link re1 = "stylesheet" type = "text/css" href = "html/style.css">
+    </head>
+    <body>
+        <p class = "red"> This is red </p>
+        <p class = "thick"> This is thick </p>
+        <p class = "green"> This is green </p>
+        <p class = "thick green"> This is thick and green </p>
+    </body>
+</html>

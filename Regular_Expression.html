@@ -1,0 +1,97 @@
+Regular Expression 
+  Regular Expressions are patterns used to match character combinations in strings. In javascript regular expressions are objects. These patterns are used with the exex() and test() methods of Regular Expression and with the match(), matchall(), replace(), replaceall(), search() and split() methods of string 
+  Synatx: var pattern = new RegExp(pattern, attributes);
+                 (or)
+          var pattern = /pattern/attributes;
+
+    1. pattern: A string that specifies the pattern of the regular expression or another regular expression
+    2. attributes: An optional string containing any of the "g", "i", and "m" attributes that specify global, case-insensitive and multiline matches respectively 
+       i: Perform case insensitive matching
+       g: Perform a global match that is find all matches rather than stopping after the match first 
+       m: Specifies that if the string has new line return characters. The n and $ operators will now match against a new line boundary instead of a string boundary 
+
+    Example 1: <!--Regular Expressions--> 
+               <html>
+                <head>
+                    <title> Regular Expressions </title>
+                </head>
+                <body>
+                    <script>
+                        var str = "Earth is round and looks like a globe";
+                        var splitted = str.split(" ",8);
+                        document.write(splitted);
+                    </script>
+                </body>
+               </html>
+
+    Example 2: <!--Regular Expressions-->
+               <html>
+                <head>
+                    <title> Regular Expression </title>
+                </head>
+                <body>
+                    <script>
+                        var text1 = "TTU, UNT, TTU, UNT";
+                        var text2 = "TTU, UNT, TTU, UNT";
+                        var replace1 = text1.replace(/TTU/g,"Texas Tech University");
+                        document.write(replace1);
+                        var pos = text1.search(/TTU/);
+                        document.write("Searched string TTU exists at position = "+pos);
+                        document.write("<br>");
+                        var replace2 = text2.replace(/TTU/g,"Texas Tech University");
+                        document.write(replace2);
+                    </script>
+                </body>
+               </html>
+
+    Example 3: <!--Regular Expression-->
+               <html>
+                <body>
+                    <p> Click the button to perform a global Search for the letters "TTU" in a string, and display the matches </p>
+                    <button onclick = "myfunction()">Try it</button>
+                    <script>
+                        function myfunction()
+                        {
+                            var str = "TTU UNT TTU UNT TTU";
+                            var res = str.match(/TTU/g);
+                            document.write(res);
+                        }
+                    </script>
+                </body>
+               </html>
+
+    Example 4: <!--Regular Expressions-->
+               <html>
+                <body>
+                    <p> Click the button to do a multiline search for "This" at the begining of each line in a string </p>
+                    <button onclick = "myfunction()"> Try it </button>
+                    <script>
+                        function myfunction()
+                        {
+                            var str = "\n This is first line\n This is second line\n This is third line";
+                            var patt1 = /this/m;
+                            var result = str.match(patt1);
+                            document.write(result)
+                        }
+                    </script>
+                </body>
+               </html>
+
+    Example 5: <!--regular Expression-->
+               <html>
+                <body>
+                    <p> Click the button to a multiline search for "line" at the ending of each line in a string </p>
+                    <button onclick = "myfunction()"> Try it </button>
+                    <script>
+                        function myfunction()
+                        {
+                            var str = "\n This is first line \n This is second line";
+                            var patt = /line$/m;
+                            var result = str.match(patt)
+                            document.write(result);
+                        }
+                    </script>
+                </body>
+               </html>
+
+  Note: the m modifier treat begining(n) and end($) characters to match the begining or end of each line of a string(delimited by \n or \r), rather than just the begining or end of the string 

@@ -1,0 +1,46 @@
+Data Validation
+  Javascript can be used to validate data in HTML forms on the clients computers before sending it to the web server 
+  Data validation in forms generally performs 2 functions
+  1. Basic Validation: First of all, the form must be checked to make sure data entered into each form field that required it. This would need just loop through each field in the form and check for data 
+  2. Data Format Validation: Secondly, the data that is entered must be checked for correct from and value/ This would need to put more logic to test correctness of data 
+
+  Example: <html>
+            <head>
+                <title> From Validation </title>
+                <script type = "text/Javascript">
+                    function validate form()
+                    {
+                        var x = document.myform.fname.value;
+                        var y = document.myform.email.value;
+                        var atpos = y.indexOf("@");
+                        var dotpos = y.last.indexOf(".");
+                        if(x == null;; x == " ")
+                        {
+                            alert("First name must be filled out");
+                        }
+                        else
+                        {
+                            alert("Hello"+x);
+                        }
+                        if(atpos<1;; dotpos<atpos+2;; dotpos+2>=y.length)
+                        {
+                            alert("Not a valid E-mail Address");
+                        }
+                        else
+                        {
+                            alert("your E-mail Address is:"+y);
+                        }
+                    }
+                </script>
+            </head>
+            <body>
+                <form name = "myform" onsubmit = "validateform()" method = "post">
+                    <pre>
+                    First name:<input type = "text" name = "frame"><br>
+                    Email:<input type = "text" name = "email"><br>
+                    <input type = "submit" value = "submit">
+                    </pre>
+                </form>
+            </body>
+           </html>
+           

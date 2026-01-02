@@ -1,0 +1,43 @@
+Opening A New Window
+  In javascript, window object represents an open window in a web browser. To open a new window you have to use open() function of window object.
+  The open() function allows you to open a new browser window for the viewer to use 
+  Syntax: window.open('URL', 'name', attribute1, attribute2, , , );
+
+  1. URL: Optional, it specifies the url of the page to open. If no url is psecified a new window with about, blank is opened
+  2. name: Optional, it specifies the target attribute on the name of the window. The following values are supported
+    a. blank: URL is loaded into a new window. This is default
+    b. _arent: url is loaded into the parent frame 
+    c. _relf: url replaces the current page 
+    d. _top: url replaces any framessets taht may be loaded 
+    e. name: the name of the window 
+  3. attributes1, attributes2, , , ,: A choice of attributes that you can abjust as per the need. 
+
+  List of the optional attributes you can use as parameters in open() function
+    1. Width: Pixels(Define the width of the new window. Minimum value is 100)
+    2. Heigth: Pixels (Define the height of the new window minimum value is 100)
+    3. Resizable: Yes/1/0 (Define whether or not the window is resizable. Only internet explorer, firefox and opera support this attribute)
+    4. Scrollbars: Yes/1/0 
+    5. Tollbar: Yes/1/0 
+    6. Fullscreen: Yes/1/0 
+    7. Left: Pixels (Negative values are not allowed)
+    8. Top: Pixels (Negative values are not allowed)
+    9. Menubar: Yes/1/0 
+    10. Status: Yes/1/0 
+
+  Example: <html>
+            <head>
+                <title> window.open() </title>
+            </head>
+            <body>
+                <h3> Click the button to open a new window with some specifications </h3>
+                <Button onclick = "myfunction()">
+                    Tryit
+                </Button>
+                <script type = "text/Javascript">
+                    function myfunction()
+                    {
+                        window.open("http://www.google.com", "_blank", "toolbar = yes, scrollbars = yes, resizable = yes, top = 500, left = 500, width = 400, height = 400");
+                    }
+                </script>
+            </body>
+           </html>

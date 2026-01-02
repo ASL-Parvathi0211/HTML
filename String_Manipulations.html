@@ -1,0 +1,126 @@
+String Manipulations
+  In Javascript string is an object that represents a sequence of characters. Strings are used for storing and manipulating text 
+  A string can be any text inside quotes, you can use a gle or double quotes to represent a string value
+
+  Creating a string: There are two wayd to create a string in Javascript
+  1. By using literal
+  2. By using object(new keyword)
+   Example: var name = "ASLParvathi";
+                     or
+            var name = new string("ASLParvathi");
+    Javascript supports the following string manipulation 
+
+    Functions:
+    a. toLowercase() 
+      It converts all upper characters into their equivalent lower case characters. If the string contains non-characters they remain un-changed 
+      Example: <html>
+                 <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(name.toLowercase());
+                    </script>
+                 </body>
+               </html>
+
+    b. toUppercase()
+      It converts all lower case characters into their equivalent upper case characters.
+      If the string contains non-characters they remain unchanged 
+      Example: <html>
+                <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(name.toUppercase());
+                    </script>
+                </body>
+               </html>
+
+    c. CharAt()
+      It returns a character whose index value is supplied as an argument to the method
+      Example: <html>
+                <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(ChartAt(o));
+                    </script>
+                </body>
+               </html> 
+
+    d. Concat()
+      It simply combines or concatenates two strings into a single string 
+      Example: <html>
+                <body>
+                    <script>
+                        var s1 = "soft";
+                        var s2 = "ware";
+                        document.write(s1.concat(s2));
+                    </script>
+                </body>
+               </html>
+
+    e. indexOf()
+      It takes character as argument and returns the numeric index value, which is nothing but the position of that character in the given string 
+      Example: <html>
+                <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(name.indexOf('s'));
+                    </script>
+                </body>
+               </html>
+
+    f. slice()
+      It takes two arguments, starting and ending indexes respectively. The index argument specify the initiating character and the end specifies the last character to be displayed
+      Example: <html>
+                <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(name.slice(3,7));
+                    </script>
+                </body>
+               </html>
+
+    g. length()
+      This function finds the length of the specified string supplied as argument 
+      Example: <html>
+                <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(name.length());
+                    </script>
+                </body>
+               </html>
+
+    h. lastIndexOf()
+      The prior start searching string from the end of the string and post from the begining 
+      Example: <html>
+                <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(name.lastIndexOf('A'));
+                    </script>
+                </body>
+               </html>
+
+    i. fromCharCode()
+      It takes a list of ASCII codes value as a parameter and returns their equivalent character 
+      Example: <html>
+                <body>
+                    <script>
+                        document.write(fromcharcode(97));
+                    </script>
+                </body>
+               </html>
+
+    j. trim()
+      It removes white spaces begining of the string only 
+      Example: <html>
+                <body>
+                    <script>
+                        var name = "ASLParvathi"
+                        document.write(name.trim());
+                    </script>
+                </body>
+               </html>
+
+    k. charcodeAt()
+      It returns the Unicode (ASCII code value) of the character whose index value is supplied as an argument to the method 

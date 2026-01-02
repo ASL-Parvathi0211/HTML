@@ -1,0 +1,188 @@
+Javascript Tokens
+    Smallest individual words or symbols are called tokens. These tokens Javascript can understand when javascript is interpreted 
+
+1. Identifiers
+    identifiers are nothing but variables, methods or object in Javascript. They consist combination of characters and digits. You must begin all identifiers with either a letter or underscore 
+
+    Rules for declaring Identifier:
+    --> The first character in an identifier name must be an alphabet or underscore
+    --> The identifier name should not be any key-word of the Javascript
+    --> No commas or blanks are allowed within an identifier name
+    --> No special symbol other than underscore(-) allowed 
+
+2. Keywords
+    Keywords are the words whose meaning already pre-defined by programming language. In Javascript they perform unique functions such as declaring new variables and functions 
+    Keywords, which are built into Javascript are always available for use by the Programmers
+    break, if, this, function, continue, in, true, return, else, int, var, false, new, while, for, null, with 
+
+3. Literals
+    Literals are nothing but a constnt values. These values do not change during the execution of your scripts.
+    a. Integer Literals 
+       Var max_marks = 100;
+       var max_marks = 0100 (octal bases)
+       Var max_marks = 0x100 (Hexa Decimal_base 16) 
+
+    b. Floating Point Literals 
+       Var pi = 3.1432;
+       Var rate_of_interest = 8.50;
+
+    c. Boolean Literals 
+       Javascript implements Boolean data type and therefore it support true or false. Boolean value 1 for true and 0 for false 
+
+    d. String Literals 
+       A string literals is one or more characters enclosed in double (" ") or single(' ') quotes
+       Example: Var name = "ASLParvathi"
+                       or 
+                Var name = "ASLParvathi"
+                var college name = "Texas Tech University"
+
+4. Operators
+    An operator is a symbol that perform a specific operation. The data elements upon which an operator will perform a particular operation are called "operands" 
+    a. assignment Operators: =, +=, -=, *=, /=, %= 
+        Incremental and decremental operator: ++, --
+        Conditional operator: variable = Expression1?Expression2:Expression3
+        Logical Operators: && (AND), ;;(OR), !=(Not Equal to)
+        Bitwise operators: &(Bitwise_AND), ;(Bitwise_OR), ^(Bitwise_XOR)
+        Shift Operators: <<(Left Shift), >>(Right Shift) 
+
+        Example: <!--Arithematic Operators-->
+                  <html>
+                    <head>
+                        <title> arithematic Operators </title>
+                    </head>
+                    <body>
+                        <script language = "Javascript"
+                                Type = "Text/Javascript">
+                                var a=10; b=5;
+                                document.write("<br> sum ="+(a+b));
+                                document.write("<br> subtraction ="+(a-b));
+                                document.write("<br>multiplication ="+(a*b));
+                                document.write("<br>division="+(a/b));
+                                document.write("<br>modulo Division="+(a%b));
+                            </script>
+                    </body>
+                  </html>
+        
+               ii. <!--Relational Operators-->
+                   <html>
+                    <head>
+                        <title> relational Operatiors </title>
+                    </head>
+                    <body>
+                        <script language = "Javascript" type = "Text/Javascript">
+                            var a=10, b=5;
+                            document.write("<br>lessthan value="+(a<b));
+                            document.write("<br>Greaterthan value="+(a>b));
+                            document.write("<br>Is equal to value="(a==b));
+                            document.write("<br>Not Equal to value="+(a!=b));
+                        </script>
+                    </body>
+                   </html>
+
+                iii. <!--Assignment Operators-->
+                     <html>
+                        <head>
+                            <title> Assignment Operators </title>
+                        </head>
+                        <body>
+                            <script>
+                                var a=10;
+                                document.write("a="+(a+=5));
+                                document.write("a="+(a-=5));
+                                document.write("a="+(a*=3));
+                                document.write("a="+(a!=2));
+                            </script>
+                        </body>
+                     </html>
+
+                iV. <!--Incremental Operators-->
+                    <html>
+                        <head>
+                            <title> Incremental Operators </title>
+                        </head>
+                        <body>
+                            <script>
+                                var a=10; b; c=10; d;
+                                b = a++;
+                                document.write("a="+a+"+b"+b);
+                                d = ++c;
+                                document.write("c="+c+"d="+d);
+                            </script>
+                        </body>
+                    </html>
+
+                V. <!--Decrement Operators-->
+                   <html>
+                    <head>
+                        <title> Decrement Operators </title>
+                    </head>
+                    <body>
+                        <script>
+                            var a=10; b; c=10; d;
+                            b = a--;
+                            document.write("a="+a+"c="+c);
+                            d = --c;
+                            document.write("c="+c+"d="+d);
+                        </script>
+                    </body>
+                   </html>
+
+                Vi. <!--Conditional/Ternary Operator-->
+                    <html>
+                        <head>
+                            <title> Conditional Operator </title>
+                        </head>
+                        <body>
+                            <script>
+                                var a=10; b=20; big;
+                                big = (a>b)?a:b;
+                                document.write("<br>Biggest value="+big);
+                            </script>
+                        </body>
+                    </html>
+
+                Vii. <!--Logical Operators-->
+                     <html>
+                        <head>
+                            <title> Logical Operators </title>
+                        </head>
+                        <body>
+                            <script>
+                                var a=1; b=2; c=3;
+                                document.write("Logical AND value="+(a<b)&&(a<<c));
+                                document.write("Logical OR value="+((a>b);;(a<c)));
+                                document.write("Logical Not value="+(a!=b));
+                            </script>
+                        </body>
+                     </html>
+
+                Viii. <!--Bitwise Operators-->
+                      <html>
+                        <head>
+                        <title> Bitwise Operators </title>
+                        </head>
+                        <body>
+                            <script>
+                                var a=8; b=7;
+                                document.write("Bitwise AND value="+(a&b)<br>);
+                                document.write("Bitwise OR value="+(a;;b)<br>);
+                                document.write("Bitwise XOR value="+(a^b));
+                            </script>
+                        </body>
+                      </html>
+                      
+                iX.<!--Shift Operators-->
+                   <html>
+                    <head>
+                        <title> Shift Operators </title>
+                    </head>
+                    <body>
+                    <script>
+                    Var a=60;
+                    document.write("Left shift with 2 bits value = +"(a<<2));
+                    document.write("Right shift with 2 bits value = "+(a>>2));
+                    </script>
+                    </body>
+                   </html>
+        
+                   

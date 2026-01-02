@@ -1,0 +1,39 @@
+The Status Bar
+  The status bar is the small message area you see at the bottom of the web browser window. For Internet Explorer users, you probably see a web page symbol and the word "done". For Netscape navigator, users, you probably see document "done". This area can actually be used to show a message 
+
+  Example: <html>
+             <head>
+                <title> status bar </title>
+             </head>
+             <body>
+                <script type = "text/javascript">
+                    function statword (message)
+                    {
+                        window.status = message;
+                    }
+                </script>
+                <center>
+                    <form>
+                        <input type = "button" value = "write a status bar message" onclick = statword ("This is my message");>
+                        <input type = "button" value = "Erase the status bar message" onclick = "statword('');">
+                    </form>
+                </center>
+             </body>
+           </html>
+
+  Example 2: <html>
+                 <head>
+                    <script language = "Javascript">
+                        function Init()
+                        {
+                            var dt = new date();
+                            var currentday = dt.getdate();
+                            var currentmonth = dt.getmonth();
+                            var currentyear = dt.getfullyear();
+                            self.status = currentmonth+"/"+currentday+"/"+currentyear;
+                        }
+                    </script>
+                 </head>
+                 <body onload = "Init()">
+                 </body>
+             </html>
