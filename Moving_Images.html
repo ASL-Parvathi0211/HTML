@@ -3,4 +3,33 @@ Moving Images
   To make an animation possible, the animated element must be animated relative to a parent container
   The container element should be created with style = "position:relative"
   The animation element should be created with style = "position:absolute"
-  Using DOM object properties and Javascript function we can move the images/ob
+  Using DOM object properties and Javascript function we can move the images/objects. 
+    1. we are using the javascript function getelementsbyID()  to get a dom object and then assigning it to a global variable imgobj
+    2. we have defined an initiliazation function init() to initialize imgobj, where we have set its position and left attributes
+    3. we are calling initialization function at the time of window load
+    4. finally, we are calling moveRight() function to increase the left distance by 10pixels. You could also set it to a negative value to move it to the left side
+
+    EX: moving images
+        <html>
+          <title> Javascript Animation </title>
+          <script type = "text/javascript">
+            var imgobj = null;
+            function init()
+            {
+              imgobj = document.getelementByID('myImage');
+              imgobj.style.position = 'relative'
+              imgobj.style.left = 'opx';
+            }
+            function moveRight()
+            {
+              imgobj.style.left = parseInt(imgobj.style.left)+10+'px';
+            }
+          </script>
+          <body>
+            <form>
+              <img id = 'myImage' src = "D:\move\button_red.gif"\>
+              <p> click button below to move the image to right</p>
+              <input type = "button" value = "clickme" onclick = "moveRight();"\>
+            </form>
+          </body>
+        </html>
