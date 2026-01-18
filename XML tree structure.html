@@ -1,0 +1,97 @@
+XML Tree Structure
+    XML documents are formed as element trees
+    An XML tree starts at a root elements and branches from the root to child elements
+    All elements can have sub elements(child elements):
+    Syntax:
+        <root>
+            <child>
+                <subchild> ....... </subchild>
+            </child>
+        </root>
+
+    Example: 
+        <?xml version ="1.0"?>
+        <company>
+            <Employee>
+                <FirstName> Srinivas Rao </FirstName>
+                <LastName>P</LastName>
+                <ContactNo>123456789</ContactNo>
+                <Email>pfafaf@gmail.com</Email>
+                <Address>
+                    <City>Narasaraopet</City>
+                    <State>AndhraPradesh</State>
+                    <Zip>75063</Zip>
+                </Address>
+            </Employee>
+        </company>
+
+    Document Typr Definition-DTD
+        A Document Type Definition(DTD) describes the tree structure of a document and something about its data. It is a set of markup affirmations that actually define a type of document for hte SGML family, like GML, SGML, HTML, XML
+        A DTD can be declared inside an XML document as inline or as an external recommendation. DTD determines how many times a node should appear, and how their child nodes are ordered.
+
+        There are 2 data types, PCDATA and CDATA
+            PCDATA is parse character data
+            CDATA is character data, not usually parsed
+
+        XML document with an internal DTD
+            <?XML version="1.0?">
+            <!DOCTYPE address [
+            <!ELEMENT address (name, email, phone, birthday)>
+            <!ELEMENT name (first, last)>
+            <!ELEMENT first (#PCDATA)>
+            <!ELEMENT last (#PCDATA)>
+            <!ELEMENT email (#PCDATA)>
+            <!ELEEMNT phone (#PCDATA)>
+            <!ELEMENT birthday (year, month,day)>
+            <!ELEMENT year(#PCDATA)>
+            <!ELEMENT month(#PCDATA)>
+            <!ELEMENT day(#PCDATA)>
+            ]>
+
+        DTD Example:
+            <?XML version="1.0"?>
+            <!DOCTYPE address SYSTEM "address.dtd">
+            <address>
+                <nmae>
+                    <first>rohit</first>
+                    <last>sharma</last>
+                </nmae>
+                <email>sharma@gmail.com</email>
+                <phone>123456789</phone>
+                <birthday>
+                    <year>1987</year>
+                    <month>june</month>
+                    <day>28</day>
+                </birthday>
+            </address>
+
+            OUTPUT:
+                <address>
+                    <name>
+                        <first>rohit</first>
+                        <last>sharma</last>
+                    </name>
+                    <email>sharma@gmail.com</email>
+                    <phone>123456789</phone>
+                    <birthday>
+                        <year>1987</year>
+                        <month>june</month>
+                        <day>23</day>
+                    </birthday>
+                </address>
+
+        The DTD above is interpreted like This
+            !DOCTYPE address defines that the root element of this document is address 
+            !ELEMENT address defines that the address elements must contain four elements: "name, email, phone, birthday"
+            !ELEMENT name defines that the name element must contain two elements: "first, last"
+                !ELEMENT first defines the first element to be of type "#PCDATA"
+                !ELEMENT last defines the last element to be of type "#PCDATA"
+            !ELEMENT email defines the email element to be of type "#PCDATA"
+            !ELEMENT phone defines the phone element to be of type "#PCDATA"
+            !ELEMENT birthday defines that the birthday element must contain three elements "year, month, day"
+                !ELEMENT yeardefines the year element to be of type "#PCDATA"
+                !ELEMENT month defines the month element to be of type "#PCDATA"
+                !ELEMENT day defines the day element to be of type "#PCDATA"
+
+                
+         
