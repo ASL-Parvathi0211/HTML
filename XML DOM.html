@@ -1,0 +1,67 @@
+XML DOM
+    DOM is an acronym stands for Document Object Model. It defines a standard way to access and manipulate documents. The documents object model(DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a documents is accessed and manipulated
+    As a W3C specification, one important objective for the Document object Model is to provide standard programming interface that can be used with any programming languages
+    
+    Structure of DOM:
+        DOM can be though of as a tree or Forest(more than one tree). The term structure model is sometimes used to describe the tree-like represention of a document. One important property of DOM structure model is structural isomirphism: if any two DOM implementations are used to create a representation of the same document, they will create the same structure model, with precisely the same objects and relationships
+
+    Why called an Object Model?
+        Documents are modeled using objects, and the model includes not only the structure of a document but also the behaviour of a document and the objects of which it is composed of like tag elements with attributes in HTML
+
+    Properties of DOM:
+       Let's see the properties of the document that can be accessed and modified by the document object
+       1. Window Object: Window Object is always at top of the hierarchy
+       2. Document Object: When an HTML document is loaded into a window, it become a document object
+       3. Form Object: It is represented by form tags
+       4. Link Objects: It is represented by link tags
+       5. Anchor Objects: It is represented by a href tags
+       6. Form Control Elements: Form can have many control elements such as tex fields, buttons, radio buttons, and checkboxes, etc.
+
+    Methods of Document Object:
+        1. write("string"): write the given string on the document
+        2. getElementById(): returns the elements having the given id value
+        3. getElementsByName(): returns all the elements having the given name value
+        4. getElementsByTagName(): returns all the elements having the given tag name
+        5. getElementsByClassName(): returns all the elements having the given class name 
+
+    Example of dom manipulation:
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title> DOM manipulation </title>
+            </head>
+            <body>
+                Enter Value1 <input type = "text" id="val1">
+                <br>
+                <br>
+                Enter value2 <input type=".text" id="val2">
+                <br>
+                <br>
+                <button onclick="getAdd()"> Click to add </button>
+                <br>
+                <p id="result"></p>
+                <!--Javascript code inside body.tag-->
+                <script type="text/javascript">
+                    function getAdd()
+                    {
+                        //it will fetch the value of input with id vall
+                        const num1=Number(document.getElementById('val2').value);
+
+                        //It will fetch the value of input with id val2
+                        const num2=Number(document.getElementById('val2').value);
+
+                        //addition
+                        const add=num1+num2;
+
+                        console.log(add);
+
+                        //displaying the result in paragraph using dom
+                        document.getElementById('result').innerHTML="Addition:"+add;
+
+                        //it will change the color of paragraph with red
+                        document.getelementById('result').style.color='red';
+                        
+                    }
+                </script>
+            </body>
+        </html>

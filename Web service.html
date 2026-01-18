@@ -1,0 +1,41 @@
+Web Services
+    A web service is can be defined by following ways
+        It is a client-server application or application component for communication
+        The method of communication between two devices over the network
+        It is a software system for the interoperable machine to machine communication 
+        It is a collection of standards or protocols for exchanging information between two devices or application 
+
+    Types of Web Services 
+        There are two types of web services
+        
+        1. Restful Web Services
+            Restful stands for Representational State Transfer. It is developed by Roy Thomas Fielding who also developed HTTP. Then main goal of Restful web services is to make web services more effective. Restful web services try to define services using the different concepts that are already present in HTTP. REST is an architectural approach, not a protocols
+            It does not define the standard message exchange foramt. We can build REST services with both XML and JSON is more popular format with REST. The key abstraction is a resource in REST. A resource can be anything. It can be accessed through a Uniform Resource Identifier(URI).
+            The resource has representations like XML, HTML, and JSON. The current state is captured by representationsl resource. When we request a resource, we provide the representaion of the resource. The important methods of HTTP 
+                GET: It reads a resource
+                PUT: It updates an existing resource
+                POST: It creates a new resource
+                DELETE: It deletes the resource
+
+            For example, if we want to perform the following actions in the social media application, we get the corresponding results 
+                POST/users: It creates a users
+                GET/users/{id}: It retrieve the details of onw users
+                GET/users: It retrieve the details of all users 
+                DELETE/users: It delete all users
+                DELETE/users/{id}: It delete a users
+                GET/users/{id}/post/post_id: It retrieve the detail of a specific post 
+                POST/users/{id}/posts: It creates a post for a user 
+
+            Advantages of Restful web services 
+                Restful web services are platform-independent
+                It can be written in any programming language and can be executed on any platform
+                It provides different data format like Json, text, HTML, and XML
+                It is fast in comparison to SOAP because there is no strict specification like SOAP
+                These are reusable
+                These are language neutral
+
+        2. SOAP Web Services
+            REST defines an architectural approach whereas SOAP poses a restriction on the format of the XML. XML transfer data between the service provider and service consumer. Remember that SOAP and REST are not comparable 
+            SOAP acrony for Simple Object Access Protocol. It defines the standard XML format. It also defines the way of building web services. We use web Service Definition Language(WSDL) to define the format of request XML and the response XML
+            For example, we have requested to access the Todo application form the Facebook application. The facebook application sends an XML request to the Todo application. Todo application processes the request and generates the XML response and sends back to the facebook application 
+            

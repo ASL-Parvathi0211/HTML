@@ -1,0 +1,47 @@
+Web server
+    Web server is a computer where the web content is stored. Basically web server is used to host the web sites but there exists other web servers also such as gaming, storage, FTP, email, etc.
+    Web sites is collection of web pages while web server is a software that respond to the request for web resources
+
+    Web Server Working
+        Web server respond to the client request in either of the following two ways:
+        Sending the file to the client associated with the requested URL
+        Generating response by invoking a script and communicating with database
+
+    Key Points
+        When client send request for a web page, the web server search for the requested page if requested page is not found then it will send it to the client with an HTTP response.
+        If the requested web page is not found, web server will send an HTTP response:Error 404 not found
+        If client has requested for some other resources, then the web server will contact to the application server and data stored to construct the HTTP response
+
+    Architecture
+        Web server Architecture follows the following two approaches
+        1. Concurrent Approach
+            Concurrent Approach allows the web server to handle multiple client requests at the same time.
+            It can be achieved by following methods like
+                a. Multiprocess
+                    In this a single process(parent process) initiates several single-threaded child processes and distribute incoming requests to these child processes. Each of the child processes are responsible for handling single request
+                    It is the responsibility of parent process to monitor the load and decide if process should be killed or forked
+            
+                b. Multithreaded
+                    Unlike multiprocess, it features creates multiple single-threaded processes
+                
+                c. Hybrid method
+                    It is combination of above two approaches. In this approach multiple processes are created and each process initiates multiple threads. Each of the threads handles one connection. Using multiple threads in single process results in less load on system resources
+
+                Examples
+                Following table describes the most leading web servers available today
+                | S.N. | Web Server Description                                                                                                                                                                                                                                                                                                                                   |
+                | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+                | 1    | Apache HTTP Server                                                                                                                                                                                                                                                                                                                                       |
+                |      |    The most popular web server in the world developed by the Apache Software Foundation. It is open-source software and can be installed on almost all operating systems, including Linux, Unix, Windows, FreeBSD, and Mac OS X. A large percentage of web servers globally run Apache due to its stability, flexibility, and strong community support   |
+                | 2    | Internet Information Services (IIS)                                                                                                                                                                                                                                                                                                                      |                        
+                |      |    A high-performance web server developed by Microsoft. IIS runs on Windows platforms such as Windows NT, 2000, 2003, and newer Windows versions. It comes bundled with the Windows operating system and is tightly integrated with it, making administration and management relatively easy                                                            |
+                | 3    | Lighttpd                                                                                                                                                                                                                                                                                                                                                 |
+                |      |    Pronounced “lightly,” Lighttpd is a free and open-source web server originally distributed with the FreeBSD operating system. It is known for its speed, security, and low CPU and memory usage. Lighttpd can also run on Windows, Linux, Mac OS X, and Solaris.                                                                                      |
+                | 4    | Sun Java System Web Server                                                                                                                                                                                                                                                                                                                               |
+                |      |    Developed by Sun Microsystems, this web server is designed for medium and large websites. Although it is free, it is not open-source. It runs on Windows, Linux, and Unix platforms and supports multiple languages and technologies such as JSP, Java Servlets, PHP, Perl, Python, Ruby on Rails, ColdFusion, and other Web 2.0 technologies         |
+                | 5    | Jigsaw Server                                                                                                                                                                                                                                                                                                                                            |
+                |      |    The Jigsaw W3C server is developed by the World Wide Web Consortium (W3C). It is open-source and free, and can run on platforms such as Linux, Unix, Windows, Mac OS X, and FreeBSD. Jigsaw is written in Java and supports CGI scripts and PHP programs.                                                                                             |
+                |------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+        2.Single Process Event Driven Approach
+            
